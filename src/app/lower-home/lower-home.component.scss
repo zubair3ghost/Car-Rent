@@ -1,0 +1,161 @@
+.lower-home {
+    background-color: #dce2e5;
+    padding-inline: 2rem;
+
+
+    //first phase is complete
+
+    .rent-car {
+ 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        @media(max-width:950px){
+            flex-direction: column;
+           
+             
+        }
+
+        .left {
+
+            img {
+                width: 83%;
+            }
+        }
+
+        .right {
+
+           
+            .para {
+                // border: 1px solid black;
+                width: 300px;
+                margin-right: 100px;
+                @media(max-width:950px){
+                width: 100%;
+                   
+                     
+                }
+
+                h4 {
+                    color: #000;
+                    font-family: Poppins;
+                    font-size: 50px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                }
+
+                p {
+                    color: rgba(0, 0, 0, 0.60);
+                    font-family: Poppins;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+            }
+        }
+
+
+    }
+
+
+//now list car is style here
+
+.list-car{
+
+.links{
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+}
+.cars{
+    padding-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+.first{
+    border: 1px solid;
+    background-color: white;
+    border-radius:10px ;
+    width: 22%;
+    .upper{
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        .left{
+            // display: flex;
+            // align-items: start;
+            // justify-content: space-between; 
+            h5{
+                font-size: 20px;
+                padding: 6px;
+            } 
+            p{
+                font-size: 15px;
+                padding-inline: 6px;
+            }
+        }
+        .right{
+            padding: 6px;
+        }
+    }
+    .middle{
+img{
+    width: 200px;
+}
+    }
+    .lower-middle{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding-block: 1rem;
+        .flex{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+    }
+    .bottom{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 10px;
+    }
+}
+
+
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

@@ -1,0 +1,98 @@
+
+
+.home-car{
+
+    
+    background: url('../../assets/image/car-home/back-car.svg');
+     background-repeat: no-repeat;
+     background-size: auto;
+     padding-inline:3rem;
+     height: 480px;
+     display: flex;
+     align-items: end;
+     justify-content: end;
+
+     @media(max-width:1150px){
+        background-image: none;
+    flex-direction: column;
+     
+    height: auto;
+    justify-content: center;
+    align-items: center;
+        
+     }
+
+     .after-image{
+        display: none;
+        @media(max-width:1150px){
+            display: block;
+        img{
+            width: 100%;
+            height: auto;
+        }
+            
+         }
+     }
+
+.content{
+ width: 258px;
+  
+ margin-bottom: 3rem;
+ @media(max-width:1150px){
+    width: 258px;
+    button{
+        width: 100%;
+    }
+ }
+ @media(max-width:750px){
+    width: 100%;
+    button{
+        width: 100%;
+    }
+ }
+ 
+h4{
+    color: #000;
+font-family: Poppins;
+font-size: 27px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+text-transform: capitalize;
+@media(max-width:550px){
+   font-size: 20px;
+   
+ }
+}
+P{
+    padding-block: 10px;
+    color: #000;
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    @media(max-width:550px){
+        font-size: 15px;
+        
+      }
+}
+button{
+    padding: 10px 50px;
+    background-color: var(--button-color);
+    color: white;
+    font-size: 14px;
+        border: none;
+        border-radius: 6px;
+    
+
+
+
+}
+
+
+
+
+
+
+}}

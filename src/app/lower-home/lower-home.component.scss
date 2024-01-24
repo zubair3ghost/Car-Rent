@@ -6,15 +6,17 @@
     //first phase is complete
 
     .rent-car {
- 
+
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 10px;
-        @media(max-width:950px){
+        padding-block: 5rem;
+
+        @media(max-width:950px) {
             flex-direction: column;
-           
-             
+
+
         }
 
         .left {
@@ -26,15 +28,16 @@
 
         .right {
 
-           
+
             .para {
                 // border: 1px solid black;
                 width: 300px;
                 margin-right: 100px;
-                @media(max-width:950px){
-                width: 100%;
-                   
-                     
+
+                @media(max-width:950px) {
+                    width: 100%;
+
+
                 }
 
                 h4 {
@@ -61,76 +64,344 @@
     }
 
 
-//now list car is style here
+    //now list car is style here
 
-.list-car{
+    .list-car {
 
-.links{
- display: flex;
- align-items: center;
- justify-content: space-between;
-}
-.cars{
-    padding-top: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+        .links {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
 
-.first{
-    border: 1px solid;
-    background-color: white;
-    border-radius:10px ;
-    width: 22%;
-    .upper{
-        display: flex;
-        align-items: start;
-        justify-content: space-between;
-        .left{
-            // display: flex;
-            // align-items: start;
-            // justify-content: space-between; 
-            h5{
+            p {
+                color: var(--button-color);
                 font-size: 20px;
-                padding: 6px;
-            } 
-            p{
-                font-size: 15px;
-                padding-inline: 6px;
+
+            }
+
+            .gray {
+                color: var(--Secondary-300, var(--gray, #90A3BF));
+                font-family: "Plus Jakarta Sans";
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
             }
         }
-        .right{
-            padding: 6px;
-        }
-    }
-    .middle{
-img{
-    width: 200px;
-}
-    }
-    .lower-middle{
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        padding-block: 1rem;
-        .flex{
+
+        .cars {
+            padding-top: 1rem;
             display: flex;
             align-items: center;
             justify-content: space-around;
+            gap: 10px;
+
+            @media(max-width:1204px) {
+                flex-wrap: wrap;
+
+                .first {
+                    width: 33%;
+                }
+            }
+
+            .first {
+                padding: 1rem;
+
+                background-color: white;
+                border-radius: 10px;
+                width: 23%;
+
+                @media(max-width:1204px) {
+
+                    width: 33%;
+
+                }
+
+                @media(max-width:904px) {
+
+                    width: 46%;
+
+                }
+
+                @media(max-width:604px) {
+
+                    width: 100%
+                }
+
+                .upper {
+                    display: flex;
+                    align-items: start;
+                    justify-content: space-between;
+
+                    .left {
+
+                        // display: flex;
+                        // align-items: start;
+                        // justify-content: space-between; 
+                        h5 {
+                            font-size: 24px;
+                            padding: 6px;
+                        }
+
+                        p {
+                            font-size: 15px;
+                            padding-inline: 6px;
+                            color: gray;
+                        }
+                    }
+
+                    .right {}
+                }
+
+                .middle {
+                    padding-block: 2rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    img {
+                        width: 200px;
+                    }
+                }
+
+                .lower-middle {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    padding-block: 1rem;
+
+                    .flex {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-around;
+
+                        p {
+                            color: gray;
+                        }
+                    }
+
+                }
+
+                .bottom {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding-top: 10px;
+                    padding-inline: 6px;
+
+                    .left {
+                        p {
+
+                            .price {
+                                font-size: 26px
+                            }
+
+                            .gray {
+                                color: gray
+                            }
+                        }
+                    }
+
+                    ;
+
+                    button {
+                        font-size: 15px;
+                        padding: 10px 20px;
+                        border-radius: 7px;
+                        border: none;
+                        color: white;
+                        background-color: var(--button-color);
+                    }
+
+                }
+            }
+
+
         }
 
     }
-    .bottom{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding-top: 10px;
+
+    //here is the experience section
+    .experience {
+
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        margin-top: 5rem;
+        background-color: #fff;
+
+        h3 {
+            color: #000;
+            text-align: center;
+            font-family: Poppins;
+            font-size: 35px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+
+        .flex {
+
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            gap: 10px;
+            flex-wrap: wrap;
+            padding-top: 2rem;
+
+            .section {
+                width: 343px;
+                //    border: 1px solid; 
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                img {}
+
+                h4 {
+                    padding-block: 1rem;
+                    color: var(--blue, #3563E9);
+                    text-align: center;
+                    font-family: Poppins;
+                    font-size: 30px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                }
+
+                p {
+                    color: rgba(0, 0, 0, 0.60);
+                    text-align: center;
+                    font-family: Roboto;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+
+            }
+
+        }
+
+
+
     }
-}
 
 
-}
 
-}
+
+    //subscribe section  style
+
+    .subscribe {
+        background-image: url("../../assets/image/l-home/back-img.svg");
+        height: 450px;
+        margin-block: 2rem;
+        padding: 3rem;
+        @media(max-width:733px){
+          padding: 2px;
+        }
+
+        .para {
+            width: 530px;
+            @media(max-width:733px){
+                width: 100%;
+            }
+
+            h3 {
+
+                color: #FFF;
+                font-family: Poppins;
+                font-size: 35px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                text-transform: capitalize;
+                @media(max-width:733px){
+                    font-size: 30px;
+                    
+                }
+            }
+
+            
+
+        }
+
+        form {
+            padding-top: 5rem;
+
+            label {
+                color: #FFF;
+                font-family: Roboto;
+                font-size: 30px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                text-transform: capitalize;
+                @media(max-width:633px){
+                    font-size: 22px;
+                    
+                }
+            }
+
+            .input {
+
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                background-color: white;
+                border-radius: 17px;
+                padding: 2px;
+                width: 855px;
+                @media(max-width:988px){
+                    width: 100%;
+                }
+                @media(max-width:733px){
+                    width: 100%;
+                }
+
+                input {
+                    padding-left: 25px;
+                    outline: none;
+                    color: rgba(0, 0, 0, 0.35);
+                    font-family: Poppins;
+                    border: none;
+                    font-size: 30px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                    text-transform: capitalize;
+                    @media(max-width:733px){
+                        width: 100%;
+                        font-size: 20px;
+                    }
+                }
+
+                button {
+                    color: #FFF;
+                    font-family: Poppins;
+                    font-size: 30px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    text-transform: capitalize;
+                    border: none;
+                    padding: 18px 50px;
+                    color: white;
+                    border-radius: 17px;
+                    background: var(--blue, #3563E9);
+                    @media(max-width:733px){
+                        font-size: 20px;
+                        padding: 10px 30px;
+                    }
+                }
+            }
+        }
+
+
+
+
+    }
 
 
 

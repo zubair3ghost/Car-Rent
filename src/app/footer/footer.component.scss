@@ -1,0 +1,104 @@
+.footer {
+    padding: 3rem;
+    color: white;
+    background-color: #081630;
+    ;
+
+    @media(max-width:400px) {
+        padding: 10px;
+    }
+
+    .upper {
+
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        padding-bottom: 2rem;
+
+        @media(max-width:870px) {
+            flex-direction: column;
+        }
+
+        @media(max-width:400px) {
+            width: 100%;
+        }
+
+        .left {
+
+            width: 290px;
+
+            img {
+                padding-bottom: 1rem;
+            }
+
+            p {
+                color: #FFF;
+                text-align: justify;
+
+                /* Medium/Type@16 */
+                font-family: poppins;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: 180%;
+                /* 24px */
+                letter-spacing: -0.32px;
+            }
+        }
+
+        .right {
+            display: flex;
+            align-items: start;
+            gap: 50px;
+            justify-content: space-around;
+
+            @media(max-width:870px) {
+                flex-wrap: wrap;
+            }
+
+            .first {
+                display: flex;
+                flex-direction: column;
+                padding-block: 10px;
+
+                @media(max-width:870px) {
+                    width: 250px;
+                }
+
+                h3 {
+                    font-size: 17px;
+                    padding-bottom: 1rem;
+                    font-family: poppins;
+                }
+
+                ul li {
+                    list-style: none;
+                    padding-block: 10px;
+                    font-family: poppins;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    hr {
+        background: #FFF;
+
+        width: 100%;
+    }
+
+    p {
+        color: #FFF;
+        padding-block: 1rem;
+        /* Semibold/Type@16 */
+        font-family: poppins;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        /* 24px */
+        letter-spacing: -0.32px;
+    }
+
+
+}

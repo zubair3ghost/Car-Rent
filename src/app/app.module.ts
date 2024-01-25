@@ -8,6 +8,7 @@ import { HomeCarComponent } from './home-car/home-car.component';
 import { LowerHomeComponent } from './lower-home/lower-home.component';
 import { FormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
+import { AuthenticationModule } from './authentication/authentication.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,11 @@ import { FooterComponent } from './footer/footer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,FormsModule
+    AppRoutingModule,FormsModule,
+    AuthenticationModule
+  ],
+  exports:[
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

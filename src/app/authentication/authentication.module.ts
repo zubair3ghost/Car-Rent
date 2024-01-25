@@ -6,6 +6,8 @@ import { OtpComponent } from './otp/otp.component';
  
 import { ForgetAccountComponent } from './forget-account/forget-account.component';
 import { NewPasswordComponent } from './new-password/new-password.component';
+ 
+// import { NgxIntlTelInputModule } from 'ngx-intl-tel-input';
 import { FormsModule } from '@angular/forms';
 
 
@@ -20,7 +22,11 @@ import { FormsModule } from '@angular/forms';
     NewPasswordComponent
   ],
   imports: [
-    CommonModule,FormsModule
+    CommonModule,FormsModule  
+  ],
+  exports:[
+    FormsModule 
   ]
+
 })
 export class AuthenticationModule { }

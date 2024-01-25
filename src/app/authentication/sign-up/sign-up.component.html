@@ -1,71 +1,78 @@
- 
-
- 
 <div class="sign-up">
-<div class="left">
+  <div class="left">
     <img src="assets/image/sign-up/Cover.svg" alt="">
-</div>
+  </div>
 
-<div class="right">
-<div class="logo">
+  <div class="right">
+    <div class="logo">
 
-    <img src="assets/image/header/Group.svg" alt="">
-    <div class="header">
+      <img src="assets/image/header/Group.svg" alt="">
+      <div class="header">
         <h3>Sign Up to your Account</h3>
         <p>Welcome! please enter your detail</p>
+      </div>
     </div>
-</div>
-  <div class="form">
-    <form action="">
-    <div class="input">
-      <label for="name">Name</label>
-      <input type="text" placeholder="Name">
+    <div class="form">
+      <form #signup="ngForm" (ngSubmit)="submit(signup.value)">
+        <div class="input">
+          <label for="name">Name</label>
+          <input type="text" placeholder="Name" name="username" ngModel #username="ngModel" maxlength="12" minlength="3"
+            required>
+          <span *ngIf="username.invalid  && username.touched "> Enter right name</span>
+        </div>
+        <div class="input">
+          <label for="name">Phone</label>
+          <input type="number" placeholder="Enter your phone" name="phone" ngModel #phone="ngModel" maxlength="11"
+            required pattern="[0-9]*">
+          <span *ngIf="phone.invalid  && phone.touched "> Enter right phone numeber</span>
+        </div>
+        <div class="input">
+          <label for="name">Email</label>
+          <input type="text" placeholder="Enter your email" name="email" ngModel #email="ngModel" required
+            maxlength="12">
+          <span *ngIf="email.invalid  && email.touched "> Enter right phone numeber</span>
+        </div>
+        <div class="input">
+          <label for="name">Password</label>
+          <input type="password" placeholder="Enter your Password" required name="password" #password="ngModel" ngModel
+            minlength="4" maxlength="12">
+          <span *ngIf="password.invalid  && password.touched "> Enter right phone numeber</span>
+        </div>
+        <button type="submit" [disabled]="signup.invalid">Sign Up</button>
+        {{ signup.invalid && signup.touched ? 'Form Invalid' : '' }}
+        <!-- <span ngIf="button.invalid"> please fill the form</span> -->
+
+
+      </form>
     </div>
-    <div class="input">
-        <label for="name">Phone</label>
-        <input type="text" placeholder="Phone">
+    <div class="para">
+
+      <p>Already have an account? <span> Sign In </span></p>
+      <p>or</p>
+    </div>
+
+    <div class="other-form">
+
+      <div class="div">
+        <img src="assets/image/sign-up/google-icon.svg" alt="">
+        <p>Sign in with Google</p>
       </div>
-      <div class="input">
-        <label for="name">Email</label>
-        <input type="text" placeholder="Enter your email">
+
+      <div class="div">
+        <img src="assets/image/sign-up/facebook.svg" alt="">
+        <p>Sign in with Facebook</p>
       </div>
-      <div class="input">
-        <label for="name">Password</label>
-        <input type="text" placeholder="Enter your Password">
+
+      <div class="div">
+        <img src="assets/image/sign-up/black-apple.svg" alt="">
+        <p>Sign in with Apple</p>
       </div>
-      <button>Sign Up</button>
- 
 
-    </form>
-  </div>
-  <div class="para">
+    </div>
 
-    <p>Already have an account? Sign In</p>
-    <p>or</p>
-  </div>
 
-  <div class="other-form">
-
-<div class="div">
-    <img src="assets/image/sign-up/google-icon.svg" alt="">
-    <p>Sign in with Google</p>
-</div>
-
-<div class="div">
-    <img src="assets/image/sign-up/facebook.svg" alt="">
-    <p>Sign in with Facebook</p>
-</div>
-
-<div class="div">
-    <img src="assets/image/sign-up/black-apple.svg" alt="">
-    <p>Sign in with Apple</p>
-</div>
 
   </div>
-
-
-
-</div>
 
 
 

@@ -28,26 +28,40 @@
         </div>
         <div class="input">
           <label for="name">Email</label>
-          <input type="text" placeholder="Enter your email" name="email" ngModel #email="ngModel" required
-            maxlength="12">
-          <span *ngIf="email.invalid  && email.touched "> Enter right phone numeber</span>
+          <input type="text" placeholder="Enter your email" name="email" ngModel  #emailInput="ngModel" required 
+          maxlength="30" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+          <span *ngIf="emailInput.touched && emailInput.hasError('pattern')">Enter a valid email address</span>
+          <span *ngIf="emailInput.touched && emailInput.hasError('required')">Email is required</span>
+        
         </div>
         <div class="input">
+
+          <!-- this is password and use toggle -->
           <label for="name">Password</label>
-          <input type="password" placeholder="Enter your Password" required name="password" #password="ngModel" ngModel
-            minlength="4" maxlength="12">
+          <div class="password">
+            <input type="password" placeholder="Enter your Password" [type]="showPassword ? 'text' : 'password'"
+            ngModel required="" name="password"   maxlength="14" minlength="4" #password="ngModel"            >
+           
+
+            <img src="assets/image/sign-up/eye-off.svg" alt=""*ngIf="!showPassword"  (click)="togglePasswordVisibility()">
+            <img src="assets/image/sign-up/eye-on.svg" alt="" *ngIf="showPassword" (click)="togglePasswordVisibility()">
+          </div>
           <span *ngIf="password.invalid  && password.touched "> Enter right phone numeber</span>
         </div>
-        <button type="submit" [disabled]="signup.invalid">Sign Up</button>
-        {{ signup.invalid && signup.touched ? 'Form Invalid' : '' }}
-        <!-- <span ngIf="button.invalid"> please fill the form</span> -->
+
+        <!-- this is button toggle when form is not filled -->
+        <button [disabled]="signup.invalid && signup.touched" 
+        [style.background]="signup.invalid && signup.touched? 'gray' : ' #3563E9'"
+         [style.color]="signup.invalid ? 'white' : 'white'">Sign Up</button>
+
+ 
 
 
       </form>
     </div>
     <div class="para">
 
-      <p>Already have an account? <span> Sign In </span></p>
+      <p>Already have an account? <span routerLink="/login"> Sign In </span></p>
       <p>or</p>
     </div>
 

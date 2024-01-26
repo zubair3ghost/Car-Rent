@@ -11,5 +11,15 @@ export class ForgetAccountComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  submit(value:any){
+    console.log(value);
+    
+    }
+    showPassword = false;
+    
+    togglePasswordVisibility() {
+      this.showPassword = !this.showPassword;
+    }
+
 
 }

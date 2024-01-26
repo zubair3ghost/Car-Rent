@@ -1,1 +1,84 @@
-<p>forget-account works!</p>
+<div class="login">
+    <div class="left">
+      <img src="assets/image/sign-up/Cover.svg" alt="">
+    </div>
+  
+    <div class="right">
+      <div class="logo">
+  
+        <img src="assets/image/header/Group.svg" alt="">
+        <div class="header">
+          <h3>Sign in to your Account</h3>
+          <p>Welcome back! please enter your detail</p>
+        </div>
+      </div>
+      <div class="form">
+        <form #login="ngForm" (ngSubmit)="submit(login.value)">
+         
+          <div class="input">
+            <label for="name">Email</label>
+            <input type="text" placeholder="Enter your email" name="email" ngModel  #emailInput="ngModel" required 
+            maxlength="30" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+            <span *ngIf="emailInput.touched && emailInput.hasError('pattern')">Enter a valid email address</span>
+            <span *ngIf="emailInput.touched && emailInput.hasError('required')">Email is required</span>
+          
+          </div>
+          <div class="input">
+
+            <!-- this is password and use toggle -->
+            <label for="name">Password</label>
+            <div class="password">
+              <input type="password" placeholder="Enter your Password" [type]="showPassword ? 'text' : 'password'"
+              ngModel required="" name="password"   maxlength="14" minlength="4" #password="ngModel"            >
+             
+  
+              <img src="assets/image/sign-up/eye-off.svg" alt=""*ngIf="!showPassword"  (click)="togglePasswordVisibility()">
+              <img src="assets/image/sign-up/eye-on.svg" alt="" *ngIf="showPassword" (click)="togglePasswordVisibility()">
+            </div>
+            <span *ngIf="password.invalid  && password.touched "> Enter right phone numeber</span>
+          </div>
+  
+          <!-- this is button toggle when form is not filled -->
+          <button [disabled]="login.invalid && login.touched" 
+          [style.background]="login.invalid && login.touched? 'gray' : ' #3563E9'"
+           [style.color]="login.invalid ? 'white' : 'white'">Login </button>
+  
+   
+  
+  
+        </form>
+      </div>
+      <div class="para">
+  
+        <p>Already have an account? <span> Sign In </span></p>
+        <p>or</p>
+      </div>
+  
+      <div class="other-form">
+  
+        <div class="div">
+          <img src="assets/image/sign-up/google-icon.svg" alt="">
+          <p>Sign in with Google</p>
+        </div>
+  
+        <div class="div">
+          <img src="assets/image/sign-up/facebook.svg" alt="">
+          <p>Sign in with Facebook</p>
+        </div>
+  
+        <div class="div">
+          <img src="assets/image/sign-up/black-apple.svg" alt="">
+          <p>Sign in with Apple</p>
+        </div>
+  
+      </div>
+  
+  
+  
+    </div>
+  
+  
+  
+  
+  
+  </div>

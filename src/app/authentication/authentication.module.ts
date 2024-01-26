@@ -9,6 +9,7 @@ import { NewPasswordComponent } from './new-password/new-password.component';
  
 // import { NgxIntlTelInputModule } from 'ngx-intl-tel-input';
 import { FormsModule } from '@angular/forms';
+import {   RouterModule } from '@angular/router';
 
 
 
@@ -22,7 +23,7 @@ import { FormsModule } from '@angular/forms';
     NewPasswordComponent
   ],
   imports: [
-    CommonModule,FormsModule  
+    CommonModule,FormsModule ,RouterModule 
   ],
   exports:[
     FormsModule 

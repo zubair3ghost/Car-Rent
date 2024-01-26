@@ -15,4 +15,10 @@ submit(value:any){
 console.log(value);
 
 }
+showPassword = false;
+
+togglePasswordVisibility() {
+  this.showPassword = !this.showPassword;
+}
+
 }

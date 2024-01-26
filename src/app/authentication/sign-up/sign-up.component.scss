@@ -59,7 +59,7 @@
         p {
           color: var(--Greyscale-500, #64748B);
           text-align: center;
-          font-family: Poppins;
+          font-family: "Poppins";
           font-size: 14px;
           font-style: normal;
           font-weight: 400;
@@ -80,6 +80,7 @@
       }
 
       form {
+            
 
         .input {
           padding-block: 1rem;
@@ -88,6 +89,11 @@
             width: 100%;
           }
 
+           span{
+            color: red;
+            font-size: 17px;
+          }
+          
           label {
             color: #333;
             font-family: Poppins;
@@ -115,6 +121,35 @@
             @media(max-width:480px) {
               width: 100%;
             }
+          }
+
+
+        }
+
+        .password{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 404px;
+          border: 1px solid var(--Greyscale-200, #E2E8F0);
+          border-radius: 10px;
+          @media(max-width:480px) {
+           width: 100%;
+         }
+         //this is input of password not input class
+
+
+          input{
+           width: 350px;
+           border: none;
+           outline: none;
+           @media(max-width:480px) {
+             width: 90%;
+           }
+          }
+          span{
+            color: red;
+            font-size: 17px;
           }
 
 
@@ -171,6 +206,7 @@
           font-style: normal;
           font-weight: 400;
           line-height: 26px;
+          cursor: pointer;
         }
       }
     }

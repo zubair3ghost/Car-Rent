@@ -11,5 +11,17 @@ export class NewPasswordComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  submit(value:any){
+    console.log(value);
+    
+    }
+    showPassword = false;
+    
+    togglePasswordVisibility() {
+      this.showPassword = !this.showPassword;
+    }
+       show2=false
+    togglePasswordVisibility1() {
+      this.show2 = !this.show2;
+    }
 }

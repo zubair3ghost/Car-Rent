@@ -146,7 +146,37 @@
   
   
           }
-  
+    .square{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+       padding-block: 1rem;
+          .radio{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+            
+            input{
+              height: 20px;
+              width: 20px;
+
+            }
+            p{
+             
+               font-family: "poppins";
+               font-size: 15px;
+            }
+          }
+          .righty{
+            p{
+          cursor: pointer;
+               color: var(--button-color);
+               font-family: "poppins";
+               font-size: 15px;
+            }
+          }
+    }
           button {
             display: flex;
             width: 404px;

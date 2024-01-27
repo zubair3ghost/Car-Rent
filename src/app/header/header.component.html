@@ -6,15 +6,17 @@
     
   </div>
   <div class="right">
-    <div class="items">
-        <ul>
-            <li routerLink="/home" >Home</li>
-            <li>Vehical listing</li>
-            <li> Contact</li>
+    <div class="items"  [class.showclass]="show" (click)="toggle()">
+        <ul >
+            <li  > <a routerLink="/home" routerLinkActive="activate">Home</a>   </li>
+            <li  > <a  routerLink="/required" routerLinkActive="activate">Vehical listing</a>   </li>
+            <li  > <a routerLink=" " routerLinkActive="activate">Contact</a>   </li>
+           
         </ul>
     </div>
     <div class="icons">
-      <i class="fa-solid fa-bars"></i>
+      <i class="fa-solid fa-bars " *ngIf="icon" (click)="toggle()"></i>
+      <i class="fa-solid fa-xmark" *ngIf="!icon" (click)="toggle()"></i>
     </div>
     <div class="user">
       <img src="assets/image/header/account.svg" alt="">

@@ -20,29 +20,82 @@
     display: flex;
 align-items: center;
 justify-content: space-between;
+@media(max-width:975px){
+    //always remember this logic because i am always forget it
+    .items{
+        position: absolute !important;
+        top:-170px;
+        left: -2px;
+      }  
+
+    .showclass{
+       
+        text-align: center;
+        padding-block: 1rem;
+        
+        background-color: orange;
+        width: 100%;
+        position: absolute !important;
+        top: 68px;
+        left: 2px;
+        height: 300px;
+        @media(max-width:655px){
+            top: 45px;
+        }
+    
+          ul li{
+        display: flex !important;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         padding-block: 1rem;
+
+}
+
+}
+  
+    
+}
+
+
+//
 .items{
-    @media(max-width:975px){
-        display: none;
-        font-size:17px;
-    }
+  
     padding-right: 2rem;
-   ul li {
-    display: inline-block;
-    padding-inline: 3rem;
-    color: #000;
-    font-family: Poppins;
-    font-size: 17px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    cursor: pointer;
-}}
+   ul{
+    li {
+        display: inline-block;
+        padding-inline: 3rem;
+        color: #000;
+        font-family: Poppins;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        a{
+            text-decoration: none;
+            cursor: pointer;
+            color: black;
+            &.activate{
+                border-bottom: 2px solid var(--button-color);
+                padding-top: 8px;
+            }
+        }
+    
+       
+    }
+   }
+   
+
+}
+ 
+
 .icons{
     display: none;
-    @media(max-width:950px){
+    @media(max-width:975px){
         display: block;
         font-size:18px;
-        padding-right: 4px;
+        padding-right: 11px;
     }
    
 }

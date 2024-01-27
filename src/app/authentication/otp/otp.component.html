@@ -1,1 +1,44 @@
-<p>otp works!</p>
+<div class="new-password">
+    <div class="left">
+      <img src="assets/image/sign-up/Cover.svg" alt="">
+    </div>
+  
+    <div class="right">
+      <div class="logo">
+  
+        <img src="assets/image/header/Group.svg" alt="">
+        <div class="header">
+          <h3>Sign in to your Account</h3>
+          <p>Please Enter your Password and Confirm Password</p>
+        </div>
+      </div>
+      <div class="form">
+        <form #login="ngForm" (ngSubmit)="submit(login.value)">
+         
+           
+          <p>0:59</p>
+  
+          <!-- this is button toggle when form is not filled -->
+          <button [disabled]="login.invalid && login.touched" 
+          [style.background]="login.invalid && login.touched? 'gray' : ' #3563E9'"
+           [style.color]="login.invalid ? 'white' : 'white'">Continue </button>
+  
+   
+           
+           <a routerLink="">resend</a>
+  
+  
+        </form>
+  
+      </div>
+   
+  
+  
+  
+    </div>
+  
+  
+  
+  
+  
+  </div>

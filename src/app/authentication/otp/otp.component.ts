@@ -11,5 +11,9 @@ export class OtpComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  submit(val:any){
+console.log(val);
+
+  }
 
 }

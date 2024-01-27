@@ -9,6 +9,7 @@ import { LowerHomeComponent } from './lower-home/lower-home.component';
 import { FormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
 import { AuthenticationModule } from './authentication/authentication.module';
+import { VehicalListingModule } from './vehical-listing/vehical-listing.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { AuthenticationModule } from './authentication/authentication.module';
   imports: [
     BrowserModule,
     AppRoutingModule,FormsModule,
-    AuthenticationModule
+    AuthenticationModule,VehicalListingModule
   ],
   exports:[
     FormsModule

@@ -3,6 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { SignUpComponent } from './authentication/sign-up/sign-up.component';
 import { HomeCarComponent } from './home-car/home-car.component';
 import { LoginComponent } from './authentication/login/login.component';
+import { ForgetAccountComponent } from './authentication/forget-account/forget-account.component';
+import { NewPasswordComponent } from './authentication/new-password/new-password.component';
+import { OtpComponent } from './authentication/otp/otp.component';
+import { RequiredComponent } from './vehical-listing/required/required.component';
 
 const routes: Routes = [
 
@@ -15,9 +19,26 @@ const routes: Routes = [
     component:LoginComponent
   },
   {
+    path:'otp',
+    component:OtpComponent
+  },
+  {
+    path:'forget-account',
+    component:ForgetAccountComponent
+  },
+  {
+    path:'new-password',
+    component:NewPasswordComponent
+  },
+  {
     path:'home',
     component:HomeCarComponent
   }
+  // this is vehical listing module 
+  ,{
+    path:'required',
+    component:RequiredComponent
+  },
 ];
 
 @NgModule({

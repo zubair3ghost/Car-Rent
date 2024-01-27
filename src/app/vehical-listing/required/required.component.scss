@@ -1,0 +1,29 @@
+
+
+
+ .required{
+ .form
+ {
+ .left{
+    form{
+        .input
+        {
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        select{
+            outline: none;
+            width: 280px;
+            padding-block: 1rem;
+        }
+        }
+    }
+ }
+
+ }
+
+
+
+
+ }

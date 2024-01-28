@@ -1,7 +1,7 @@
     
 
 <div class="required">
-<div class="form">
+ 
    <div class="left">
 
 
@@ -17,7 +17,40 @@
       </select>
    </div>
    <div class="input">
-      <label for="make">Make</label>
+      <label for="make">Model</label>
+       <select id="cars" name="cars">
+         <option value="volvo">select option</option>
+         <option value="saab">Saab</option>
+         <option value="fiat">Fiat</option>
+         <option value="audi">Audi</option>
+       </select>
+    </div>
+ <div class="range">
+  <h3>Price Range per Day (pkr)
+  </h3>
+<div class="upper">
+<p>2,500</p>
+<p>15000</p>
+</div>
+<div class="bar">
+  <div class="left"></div>
+  <hr>
+  <div class="left"></div>
+</div>
+<div class="two-limits">
+  <p>Minimum range 50,000 Rs</p>
+  <p>Maximium range 500M Rs</p>
+</div>
+
+
+  
+ </div>
+
+
+
+
+    <div class="input">
+      <label for="make">Registration City</label>
        <select id="cars" name="cars">
          <option value="volvo">select option</option>
          <option value="saab">Saab</option>
@@ -26,7 +59,7 @@
        </select>
     </div>
     <div class="input">
-      <label for="make">Make</label>
+      <label for="make">Transmission</label>
        <select id="cars" name="cars">
          <option value="volvo">select option</option>
          <option value="saab">Saab</option>
@@ -35,7 +68,7 @@
        </select>
     </div>
     <div class="input">
-      <label for="make">Make</label>
+      <label for="make">Car Document</label>
        <select id="cars" name="cars">
          <option value="volvo">select option</option>
          <option value="saab">Saab</option>
@@ -43,22 +76,94 @@
          <option value="audi">Audi</option>
        </select>
     </div>
-    <div class="input">
-      <label for="make">Make</label>
-       <select id="cars" name="cars">
-         <option value="volvo">select option</option>
-         <option value="saab">Saab</option>
-         <option value="fiat">Fiat</option>
-         <option value="audi">Audi</option>
-       </select>
+    <div class="condition">
+     <!-- fillhall k liye div banatai hai kal pochai gai 
+    agai kia kerna hai -->
+
+    <h3>condition</h3>
+    <div class="list">
+      <p>new</p>
+      <p>used</p>
+    </div> 
     </div>
+    <div class="fuel">
+      <h3>Fuel</h3>
+      <div class="list">
+        <p>Petrol</p>
+        <p>Diesel</p>
+        <p>LPG</p>
+        <p>CNG</p>
+        <p>Electric</p>
+        <p>Hybrid</p>
+      </div>
+   
+      
+
+    </div>
+    <button>Apply</button>
 
 
 
 
    </form>
 </div>
+<div class="right">
+
+<!-- thsi is  testing but we can handle it through ts file -->
+ 
+<div class="cars">
+  <div class="first" *ngFor="let item of car">
+
+      <div class="upper">
+          <div class="lefty">
+              <h5>{{item.name}}</h5>
+              <p>Sport</p>
+          </div>
+          <div class="righty" >
+              <img src="assets/image/l-home/red-heart.svg" alt="">
+          </div>
+      </div>
+      <div class="middle">
+          <img src="assets/image/l-home/honda.svg" alt="">
+      </div>
+      <div class="lower-middle">
+          <div class="flex">
+              <img src="assets/image/l-home/gas-station.svg" alt="">
+              <p>{{item.liter}}</p>
+          </div>
+          <div class="flex">
+              <img src="assets/image/l-home/manual.svg" alt="">
+              <p>{{item.manual}}</p>
+          </div>
+          <div class="flex">
+              <img src="assets/image/l-home/people.svg" alt="">
+              <p>{{item.people}}</p>
+          </div>
+      </div>
+      <div class="bottom">
+          <div class="lefty">
+              <p>pkr. <span class="price">{{item.price}}</span> <span class="gray">day</span> </p>
+
+          </div>
+          <div class="right">
+              <button>Rent Now</button>
+          </div>
+      </div>
+
+
+  </div>
+  <!-- this is for  -->
+   
+
+
+
+
+
+
 </div>
+
+</div>
+ 
 
 
 

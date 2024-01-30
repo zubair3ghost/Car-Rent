@@ -1,0 +1,220 @@
+<div class="detail">
+    <!-- this section for details of cars  -->
+    <div class="top-detail">
+        <div class="left">
+            <div class="upper">
+                <img src="assets/image/required/big-car.svg" alt="">
+
+            </div>
+            <div class="lower">
+                <img src="assets/image/required/View-6.svg" alt="">
+                <img src="assets/image/required/View-5.svg" alt="">
+                <img src="assets/image/required/View-4.svg" alt="">
+                <img src="assets/image/required/View-3.svg" alt="">
+                <img src="assets/image/required/View-2.svg" alt="">
+  
+            </div>
+        </div>
+        <div class="right">
+         <div class="nissan">
+
+
+            <div class="nissan-star">
+            <h3>Nissan GT - R</h3>
+            <div class="images">
+                <img src="assets/image/required/star.svg" alt="">
+                <img src="assets/image/required/star.svg" alt="">
+                <img src="assets/image/required/star.svg" alt="">
+                <img src="assets/image/required/star.svg" alt="">
+                <img src="assets/image/required/star.svg" alt="">
+            </div>
+            </div>
+            <div class="heart">
+                <img src="assets/image/required/heart.svg" alt=""> 
+            </div>
+
+         </div>
+         
+         <div class="para">
+            <p>NISMO has become the embodiment of Nissan's outstanding performance, inspired by the most unforgiving proving ground, the "race track".</p>
+         </div>
+
+         <div class="flex-container">
+            <div class="flex">
+                <p class="black">Type Car</p>
+                <p>Sport</p>
+     
+              </div>
+              <div class="flex">
+                 <p class="black">Capacity</p>
+                 <p>2 Person</p>
+      
+               </div>
+               <div class="flex">
+                 <p class="black">Steering </p>
+                 <p>Manual</p>
+      
+               </div>
+               <div class="flex">
+                 <p class="black" >Gasoline </p>
+                 <p>70L</p>
+      
+               </div>
+         </div>
+         <div class="price-and-button">
+<div class="price">
+    <p>$80.00/ <span>days</span> </p>
+    <p class="gray">$100.00</p>
+</div>
+<button>Rent Now</button>
+
+         </div>
+       
+
+
+
+
+
+        </div>
+    </div>
+
+
+    <!-- this is reference page  -->
+
+<div class="review">
+
+<div class="head">
+    <p>Reviews</p>
+</div>
+<div class="review-one">
+<div class="flex">
+    <div class="left">
+        <img src="assets/image/required/Profill.svg" alt="">
+        <div class="heading">
+            <p class="name">Alex Stanton</p>
+            <p>CEO at Bukalapak</p>
+        </div>
+    </div>
+    <div class="right">
+        <p>21 July 2022</p>
+        <div class="star">
+            <img src="assets/image/required/star.svg" alt=""> 
+            <img src="assets/image/required/star.svg" alt="">
+            <img src="assets/image/required/star.svg" alt="">
+            <img src="assets/image/required/star.svg" alt="">
+            <img src="assets/image/required/star.svg" alt="">
+        </div>
+
+    </div>
+</div>
+<div class="para-review">
+    <p>We are very happy with the service from the MORENT App. Morent
+        has a low price and also a large variety of cars
+        with good and comfortable facilities. In addition, the
+         service provided by the officers is also very friendly and very polite.</p>
+   
+</div>
+
+
+
+</div>
+<div class="review-one">
+    <div class="flex">
+        <div class="left">
+            <img src="assets/image/required/Profill2.svg" alt="">
+            <div class="heading">
+                <p class="name">Skylar Dias</p>
+                <p>CEO at Bukalapak</p>
+            </div>
+        </div>
+        <div class="right">
+            <p>21 July 2022</p>
+            <div class="star">
+                <img src="assets/image/required/star.svg" alt=""> 
+                <img src="assets/image/required/star.svg" alt="">
+                <img src="assets/image/required/star.svg" alt="">
+                <img src="assets/image/required/star.svg" alt="">
+                <img src="assets/image/required/star.svg" alt="">
+            </div>
+    
+        </div>
+    </div>
+    <div class="para-review">
+        <p>We are very happy with the service from the MORENT App. Morent
+            has a low price and also a large variety of cars
+            with good and comfortable facilities. In addition, the
+             service provided by the officers is also very friendly and very polite.</p>
+       
+    </div>
+    
+    
+    
+    </div>
+    <div class="click">
+        <p>Show All ></p>
+    </div>
+
+
+</div>
+
+
+<!-- thsi is  showing car section  -->
+<div class="right">
+
+    <!-- thsi is  testing but we can handle it through ts file -->
+     
+    <div class="cars">
+      <div class="first" *ngFor="let item of car">
+    
+          <div class="upper">
+              <div class="lefty">
+                  <h5>{{item.name}}</h5>
+                  <p>Sport</p>
+              </div>
+              <div class="righty" >
+                  <img src="assets/image/l-home/red-heart.svg" alt="">
+              </div>
+          </div>
+          <div class="middle">
+              <img src="assets/image/l-home/honda.svg" alt="">
+          </div>
+          <div class="lower-middle">
+              <div class="flex">
+                  <img src="assets/image/l-home/gas-station.svg" alt="">
+                  <p>{{item.liter}}</p>
+              </div>
+              <div class="flex">
+                  <img src="assets/image/l-home/manual.svg" alt="">
+                  <p>{{item.manual}}</p>
+              </div>
+              <div class="flex">
+                  <img src="assets/image/l-home/people.svg" alt="">
+                  <p>{{item.people}}</p>
+              </div>
+          </div>
+          <div class="bottom">
+              <div class="lefty">
+                  <p>pkr. <span class="price">{{item.price}}</span> <span class="gray">day</span> </p>
+    
+              </div>
+              <div class="right">
+                  <button routerLink="/detail">Rent Now</button>
+              </div>
+          </div>
+    
+    
+      </div>
+      <!-- this is for  -->
+       
+    
+    
+    
+    
+    
+    
+    </div>
+    
+    </div>
+
+
+</div>

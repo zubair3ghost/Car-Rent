@@ -7,6 +7,8 @@ import { ForgetAccountComponent } from './authentication/forget-account/forget-a
 import { NewPasswordComponent } from './authentication/new-password/new-password.component';
 import { OtpComponent } from './authentication/otp/otp.component';
 import { RequiredComponent } from './vehical-listing/required/required.component';
+import { DetailComponent } from './vehical-listing/detail/detail.component';
+import { BillingRentalComponent } from './vehical-listing/billing-rental/billing-rental.component';
 
 const routes: Routes = [
 
@@ -38,6 +40,14 @@ const routes: Routes = [
   ,{
     path:'required',
     component:RequiredComponent
+  },
+  {
+    path:'detail',
+    component:DetailComponent
+  },
+  {
+    path:'billing-rental',
+    component:BillingRentalComponent
   },
 ];
 

@@ -9,6 +9,10 @@ import { OtpComponent } from './authentication/otp/otp.component';
 import { RequiredComponent } from './vehical-listing/required/required.component';
 import { DetailComponent } from './vehical-listing/detail/detail.component';
 import { BillingRentalComponent } from './vehical-listing/billing-rental/billing-rental.component';
+import { ContactInfoComponent } from './contact/contact-info/contact-info.component';
+import { UserPannelComponent } from './contact/user-pannel/user-pannel.component';
+import { HistoryComponent } from './contact/history/history.component';
+import { FavouriteComponent } from './contact/favourite/favourite.component';
 
 const routes: Routes = [
 
@@ -48,6 +52,23 @@ const routes: Routes = [
   {
     path:'billing-rental',
     component:BillingRentalComponent
+  },
+  // contact us module here route is here
+  {
+    path:'contact-info',
+    component:ContactInfoComponent
+  },
+  {
+    path:'user-pannel',
+    component:UserPannelComponent
+  },
+  {
+    path:'history',
+    component:HistoryComponent
+  },
+  {
+    path:'favourite',
+    component:FavouriteComponent
   },
 ];
 

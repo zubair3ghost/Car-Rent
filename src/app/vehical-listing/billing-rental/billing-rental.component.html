@@ -2,7 +2,7 @@
 
     <div class="left">
         <!-- this is for bill  remember same form is required for  all component -->
-        <form action="">
+        <form  #billing="ngForm" (ngSubmit)="submitbilling(billing.value)"  >
             <div class="billing-info">
 
 
@@ -23,22 +23,33 @@
                     <div class="input">
 
                         <label for="">Name</label>
-                        <input type="text" name="" placeholder="Your name">
+                        <input type="text" name="name" placeholder="Your name" ngModel required #name="ngModel"  >
+                        <span
+                   
+                        *ngIf="name.invalid  && name.touched "> Enter right name</span>
                     </div>
                     <div class="input">
 
                         <label for="">Phone Number</label>
-                        <input type="text" name="" placeholder="Phone number">
+                        <input type="text" placeholder=""  ngModel required name="phone" #phone="ngModel"
+                    [maxlength]="11"
+            required pattern="[0-9]*">
+                    <span *ngIf="phone.invalid  && phone.touched "> Enter right phone numeber</span>
+
                     </div>
                     <div class="input">
 
                         <label for="">Address</label>
-                        <input type="text" name="" placeholder="Your name">
+                        <input type="text" placeholder="New York" required  ngModel name="address"  #address="ngModel"> 
+                        <span *ngIf=" address.invalid && address.touched"> Enter yuor address</span> 
+    
                     </div>
                     <div class="input">
 
-                        <label for="">Address</label>
-                        <input type="text" name="" placeholder="Town or city">
+                        <label for="town">Town/City</label>
+                        <input type="text" placeholder="New York" required  ngModel name="town"  #town="ngModel"> 
+                    <span *ngIf=" town.invalid && town.touched"> Enter yuor home address</span> 
+
                     </div>
 
 
@@ -87,18 +98,23 @@
 
                         <div class="input">
 
-                            <label for="">Location</label>
-                            <input type="text" name="" placeholder="Select your city">
+                            <label for="location">Location</label>
+                            <input type="text"  placeholder="Select your city" ngModel required  name="location" #location="ngModel">
+                            <span *ngIf="location.invalid && location.touched"> Enter your location</span>
                         </div>
                         <div class="input">
 
-                            <label for="">Date</label>
-                            <input type="text" name="" placeholder="Select your date">
+                            <label for="pickdate">Date</label>
+                            <input type="date"   placeholder="Select your date" ngModel required  name="pickdate"
+                            #pickdate="ngModel">
+                            <span *ngIf="pickdate.touched && pickdate.invalid">Enter pick up date</span>
                         </div>
                         <div class="input">
 
-                            <label for="">Time</label>
-                            <input type="text" name="" placeholder="Select your time">
+                            <label for="pickuptime">Time</label>
+                            <input type="tiem"  placeholder="Select your date" ngModel required  name="pickuptime"
+                            #picktime="ngModel">
+                            <span *ngIf="picktime.touched && picktime.invalid">Enter pick up time</span>
                         </div>
                     </div>
                 </div>
@@ -117,18 +133,23 @@
 
                         <div class="input">
 
-                            <label for="">Location</label>
-                            <input type="text" name="" placeholder="Select your city">
+                            <label for="location">Location</label>
+                            <input type="text"   placeholder="Select your city" ngModel required  name="location" #location="ngModel">
+                            <span *ngIf="location.invalid && location.touched"> Enter your location</span>
                         </div>
                         <div class="input">
 
-                            <label for="">Date</label>
-                            <input type="text" name="" placeholder="Select your date">
+                            <label for="dropdate">Date</label>
+                            <input type="date"  placeholder="Select your date" ngModel required  name="dropdate"
+                            #dropdate="ngModel">
+                            <span *ngIf="dropdate.touched && dropdate.invalid">Enter pick up date</span>
                         </div>
                         <div class="input">
 
-                            <label for="">Time</label>
-                            <input type="text" name="" placeholder="Select your time">
+                            <label for="droptime">Time</label>
+                            <input type="tiem"   placeholder="Select your date" ngModel required  name="droptime"
+                            #droptime="ngModel">
+                            <span *ngIf="droptime.touched && droptime.invalid">Enter pick up time</span>
                         </div>
                     </div>
                 </div>
@@ -164,15 +185,16 @@
 
                 <div class="check-box">
                     <div class="input-confirm">
-                        <input type="checkbox">
+                        <input type="checkbox" name="first" ngModel required #first="ngModel" >
                         <p>I agree with sending an Marketing and newsletter emails. No spam, promissed!</p>
+                        <span *ngIf="first.touched && first.invalid"> fill the reqquired conditons</span>
                     </div>
                     <div class="input-confirm">
-                        <input type="checkbox">
+                        <input type="checkbox" name="second"  ngModel required #first="ngModel" >
                         <p>I agree with our terms and conditions and privacy policy.</p>
                     </div>
 
-                    <button>Rent Now</button>
+                    <button [disabled]="billing">Rent Now</button>
                     <div class="logo-security">
 
                         <img src="assets/image/required/logo-security.svg" alt="">

@@ -4,6 +4,7 @@ import { RequiredComponent } from './required/required.component';
 import { RouterModule } from '@angular/router';
 import { DetailComponent } from './detail/detail.component';
 import { BillingRentalComponent } from './billing-rental/billing-rental.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -14,7 +15,7 @@ import { BillingRentalComponent } from './billing-rental/billing-rental.componen
     BillingRentalComponent
   ],
   imports: [
-    CommonModule,RouterModule
+    CommonModule,RouterModule,FormsModule
   ]
 })
 export class VehicalListingModule { }

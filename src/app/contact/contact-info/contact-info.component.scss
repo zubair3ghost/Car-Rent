@@ -92,11 +92,16 @@
                         display: flex;
                         flex-direction: column;
                         margin-block: 1rem;
+                         
                         @media(max-width:750px){
                             width: 100%;;
                         }
 
-
+                        span{
+                            color: red;
+                            font-size: 14px;
+                            padding-top: 5px;
+                        }
 
                         label {
                             color: #252525;
@@ -116,9 +121,11 @@
                             border: none;
                             outline: none;
                             padding: 1rem;
+                            cursor: pointer;
                             @media(max-width:750px){
                                 width: 100%;;
                             }
+                           
                         }
 
                         .text {
@@ -162,3 +169,5 @@
     }
 
 }
+
+ 

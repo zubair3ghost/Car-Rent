@@ -5,6 +5,7 @@ import { UserPannelComponent } from './user-pannel/user-pannel.component';
 import { RouterModule } from '@angular/router';
 import { HistoryComponent } from './history/history.component';
 import { FavouriteComponent } from './favourite/favourite.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -16,7 +17,7 @@ import { FavouriteComponent } from './favourite/favourite.component';
     FavouriteComponent
   ],
   imports: [
-    CommonModule,RouterModule
+    CommonModule,RouterModule,FormsModule
   ]
 })
 export class ContactModule { }

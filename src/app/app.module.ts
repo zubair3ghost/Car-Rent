@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
 import { AuthenticationModule } from './authentication/authentication.module';
 import { VehicalListingModule } from './vehical-listing/vehical-listing.module';
+import { ContactModule } from './contact/contact.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { VehicalListingModule } from './vehical-listing/vehical-listing.module';
   imports: [
     BrowserModule,
     AppRoutingModule,FormsModule,
-    AuthenticationModule,VehicalListingModule
+    AuthenticationModule,VehicalListingModule,ContactModule
   ],
   exports:[
     FormsModule

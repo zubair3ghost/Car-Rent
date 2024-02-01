@@ -51,42 +51,59 @@
 
         </div>
         <div class="right">
-        <form action="">
+        <form #contactform="ngForm" (ngSubmit)="formofcontacts(contactform)">
 
 
             <div class="all-input">
                 <div class="input">
 
-                    <label for="">First Name</label>
-                    <input type="text" placeholder="">
+                    <label for="firstname">First Name</label>
+                    <input type="text" placeholder=""  ngModel required name="firstname" #firstname="ngModel">
+                    <span
+                   
+                    *ngIf="firstname.invalid  && firstname.touched "> Enter right name</span>
                    </div>
                 
                    <div class="input">
                 
-                    <label for="">Last Name</label>
-                    <input type="text" placeholder="">
+                    <label for="lastname">Last Name</label>
+                    <input type="text" placeholder="" ngModel required name="lastname"  #lastname="ngModel">
+                    <span *ngIf="lastname.invalid  && lastname.touched "> Enter right name</span>
                    </div>
                    <div class="input">
                 
-                    <label for="">Email</label>
-                    <input type="text" placeholder="">
+                    <label for="email">Email</label>
+                    <input type="text" placeholder=""  ngModel required name="emailinput"
+                     #emailinput="ngModel"        maxlength="30" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"      >
+                     <span *ngIf="emailinput.touched && emailinput.hasError('pattern')">Enter a valid email address</span>
+                     <span *ngIf="emailinput.touched && emailinput.hasError('required')">Email is required</span>
+                   
+
                    </div>
                    <div class="input">
                 
-                    <label for="">Phone</label>
-                    <input type="text" placeholder="">
+                    <label for="phone">Phone</label>
+                    <input type="text" placeholder=""  ngModel required name="phone" #phone="ngModel"
+                    [maxlength]="11"
+            required pattern="[0-9]*">
+                    <span *ngIf="phone.invalid  && phone.touched "> Enter right phone numeber</span>
+
+  
                    </div>
                 
                    <div class="input">
                 
-                    <label for="">Message</label>
-                    <textarea  class="text"  type="text" rows="10" cols="100" placeholder="type here"></textarea>
+                    <label for="message">Message</label>
+                    <textarea  class="text"  type="text"  ngModel 
+                    name="message" rows="10" cols="100" placeholder="type here"></textarea>
                    </div>
             </div>
 
    
    <div class="btn">
-    <button  >Get a Quote</button>
+    <button [disabled]="contactform.invalid && contactform.touched" 
+    [style.background]="contactform.invalid && contactform.touched? 'gray' : ' #3563E9'"
+     [style.color]="contactform.invalid ? 'white' : 'white'">Sign Up</button>
 
    </div>
           

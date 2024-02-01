@@ -12,4 +12,9 @@ export class BillingRentalComponent implements OnInit {
   ngOnInit(): void {
   }
 
+submitbilling(value:any){
+     console.log(value,"this is billling form this shows form is working propely");
+     
+
+}
 }

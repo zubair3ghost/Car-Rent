@@ -39,10 +39,13 @@
 
                     img {}
 
-                    button {
+                    label {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
                         border-radius: 6px;
                         background: var(--blue, #3563E9);
-                        padding: 13px 20px;
+                        padding: 7px 14px;
                         border: none;
                         color: white;
                     }

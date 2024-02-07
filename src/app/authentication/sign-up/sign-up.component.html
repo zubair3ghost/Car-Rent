@@ -13,7 +13,7 @@
       </div>
     </div>
     <div class="form">
-      <form #signup="ngForm" (ngSubmit)="submit(signup.value)">
+      <form #signup="ngForm" (ngSubmit)="signUp(signup.value)">
         <div class="input">
           <label for="name">Name</label>
           <input type="text" placeholder="Name" name="username" ngModel #username="ngModel" maxlength="12" minlength="3"
@@ -22,9 +22,19 @@
         </div>
         <div class="input">
           <label for="name">Phone</label>
-          <input type="number" placeholder="Enter your phone" name="phone" ngModel #phone="ngModel" maxlength="11"
+        <div class="flag">
+          <img src="assets/image/sign-up/test.png" alt="" width="30px" height="30px">
+          
+             <input    class="flag-input" type="number" placeholder="Enter your phone" name="mobile" ngModel #phone="ngModel" maxlength="11"
             required pattern="[0-9]*">
-          <span *ngIf="phone.invalid  && phone.touched "> Enter right phone numeber</span>
+           
+        </div>
+        <span *ngIf="phone.invalid  && phone.touched "> Enter right phone numeber</span>
+
+          
+
+       
+        
         </div>
         <div class="input">
           <label for="name">Email</label>

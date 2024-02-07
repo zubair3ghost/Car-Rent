@@ -80,7 +80,42 @@
       }
 
       form {
-            
+              
+        .flag{
+        border: 1px solid red;
+        display: flex;
+        align-items: center;
+        width: 404px;
+        height: 56px;
+        border-radius: 10px;
+        border: 1px solid var(--Greyscale-200, #E2E8F0);
+        
+
+     img{
+      width: 30px;
+      height: 25px;
+  
+     }
+    .flag-input{
+         border: 1px solid green;
+         border-radius: 10px;
+         border:  none;
+         display: flex;
+         width: 365px;
+         height: 43px;
+         padding: 8px 16px;
+         align-items: center;
+         gap: 12px;
+         outline: none;
+         flex-shrink: 0;
+         font-size: 15px;
+
+         @media(max-width:480px) {
+           width: 100%;
+         }
+     }
+
+        }
 
         .input {
           padding-block: 1rem;
@@ -89,9 +124,11 @@
             width: 100%;
           }
 
+          
+
            span{
             color: red;
-            font-size: 17px;
+            font-size: 14px;
           }
           
           label {

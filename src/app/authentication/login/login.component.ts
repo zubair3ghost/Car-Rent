@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { HttpService } from 'src/app/services/http.service';
 
 @Component({
   selector: 'app-login',
@@ -7,11 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor( private router:Router,private http:HttpService) { }
 
   ngOnInit(): void {
   }
   submit(value:any){
+     
+    this.http.signIn(value).subscribe((data)=>{
+      console.log(data);
+      if(data){
+        this.router.navigate(['/otp'])
+      }
+    })
     console.log(value);
     
     }

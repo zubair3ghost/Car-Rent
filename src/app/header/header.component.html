@@ -20,8 +20,10 @@
       <i class="fa-solid fa-xmark" *ngIf="!icon" (click)="toggle()"></i>
     </div>
     <div class="user">
-      <img src="assets/image/header/account.svg" alt="">
-        <p routerLink="/sign-up">   sign-in </p>
+      <img src="assets/image/header/account.svg" alt="" *ngIf="!userService.token">
+      <img src="assets/image/header/download.jpg" alt="" *ngIf="userService.token" style="width:30px;height:30px;border-radius: 50%">
+
+        <p routerLink="/sign-up">{{userService.token ? username : 'Sign in'}}</p>
         
     </div>
   </div>

@@ -11,6 +11,8 @@ import { FooterComponent } from './footer/footer.component';
 import { AuthenticationModule } from './authentication/authentication.module';
 import { VehicalListingModule } from './vehical-listing/vehical-listing.module';
 import { ContactModule } from './contact/contact.module';
+import { NgOtpInputModule } from 'ng-otp-input';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,13 +24,15 @@ import { ContactModule } from './contact/contact.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,FormsModule,
-    AuthenticationModule,VehicalListingModule,ContactModule
+    HttpClientModule,
+    AppRoutingModule, FormsModule,
+    AuthenticationModule, VehicalListingModule, ContactModule, NgOtpInputModule
   ],
-  exports:[
+  exports: [  
     FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

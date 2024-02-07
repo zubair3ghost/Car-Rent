@@ -13,15 +13,21 @@
         </div>
       </div>
       <div class="form">
-        <form #login="ngForm" (ngSubmit)="submit(login.value)">
-         
-           
+
+        <form #otp="ngForm" (ngSubmit)="validateotp(otp.value)">
+            
+        <ng-otp-input #otpInput (onInputChange)="onOtpChange($event)" [config]="{length:6}"></ng-otp-input>
+
+        
+        
+          
+          <!-- <ng-otp-input  [formCtrl]="YourFormControl"  [config]="{length:5}"></ng-otp-input> -->
           <p>0:59</p>
   
           <!-- this is button toggle when form is not filled -->
-          <button [disabled]="login.invalid && login.touched" 
-          [style.background]="login.invalid && login.touched? 'gray' : ' #3563E9'"
-           [style.color]="login.invalid ? 'white' : 'white'">Continue </button>
+          <button [disabled]="otp.invalid && otp.touched" 
+          [style.background]="otp.invalid && otp.touched? 'gray' : ' #3563E9'"
+           [style.color]="otp.invalid ? 'white' : 'white'">Continue </button>
   
    
            

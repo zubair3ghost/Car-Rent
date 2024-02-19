@@ -172,7 +172,8 @@
                   <p>Sport</p>
               </div>
               <div class="righty" >
-                  <img src="assets/image/l-home/red-heart.svg" alt="">
+                <img src="assets/image/l-home/red-heart.svg" alt="" (click)="toggleheart()" *ngIf="!heart"    >
+                <img src="assets/image/l-home/white-heart.svg" width="23px" (click)="toggleheart()" *ngIf="heart"  >
               </div>
           </div>
           <div class="middle">

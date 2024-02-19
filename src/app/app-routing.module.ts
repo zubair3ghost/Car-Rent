@@ -13,6 +13,7 @@ import { ContactInfoComponent } from './contact/contact-info/contact-info.compon
 import { UserPannelComponent } from './contact/user-pannel/user-pannel.component';
 import { HistoryComponent } from './contact/history/history.component';
 import { FavouriteComponent } from './contact/favourite/favourite.component';
+import { Otp1Component } from './authentication/otp1/otp1.component';
 
 const routes: Routes = [
 
@@ -28,6 +29,12 @@ const routes: Routes = [
     path:'otp',
     component:OtpComponent
   },
+  {
+    path:'otp1',
+    component:Otp1Component
+  },
+
+
   {
     path:'forget-account',
     component:ForgetAccountComponent

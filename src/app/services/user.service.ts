@@ -23,7 +23,7 @@ export class UserService{
         let user = localStorage.getItem('user');
         console.log("check if userexists", user)
         if(user) user = JSON.parse(user);
-        return user;
+        return user;     
     }
 
 

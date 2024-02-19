@@ -1,17 +1,18 @@
+ 
+
 import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router'
 import { NgOtpInputComponent } from 'ng-otp-input';
 import { HttpService } from 'src/app/services/http.service';
 import { UserService } from 'src/app/services/user.service';
 import { validateotp } from 'src/app/validate';
 
 @Component({
-  selector: 'app-otp',
-  templateUrl: './otp.component.html',
-  styleUrls: ['./otp.component.scss']
+  selector: 'app-otp1',
+  templateUrl: './otp1.component.html',
+  styleUrls: ['./otp1.component.scss']
 })
-
-export class OtpComponent implements OnInit, AfterViewInit {
+export class Otp1Component implements OnInit {
 
   @ViewChild(NgOtpInputComponent, { static: false }) ngOtpInput: NgOtpInputComponent | undefined;
 
@@ -21,15 +22,14 @@ export class OtpComponent implements OnInit, AfterViewInit {
       private activeroute:ActivatedRoute         
       ) { }
 
-      otpObject: validateotp = new validateotp()
+ 
 
 
 
   ngOnInit(): void {
 
-    this.otpObject.email=history.state.useremail
-    // console.log(this.otpObject.email,  "this is from otp ngoninit method");
     
+   
   }
 
 
@@ -52,7 +52,7 @@ export class OtpComponent implements OnInit, AfterViewInit {
 
       if(data?.token){
         this.userService.token = data.token;
-        this.route.navigate(['/home'])
+        this.route.navigate(['/'])
       }else{
         alert("Otp is not valid")
       }
@@ -82,4 +82,10 @@ export class OtpComponent implements OnInit, AfterViewInit {
     console.log(val, 'this is submit and this is last event');
 
   }
+
+
+
+
+
+
 }

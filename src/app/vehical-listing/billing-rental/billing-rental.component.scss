@@ -11,18 +11,23 @@
    }
 
    .left {
-      padding-block: 2rem;
+      padding-bottom: 2rem;
       width: 60%;
       @media(max-width:1180px){
       width: 100%;
          }
 
-      form {
+      form {    
+          span{
+         color: red;
+         font-size: 14px;
+      }
 
          .billing-info {
              border-radius: 10px;
             padding: 1rem;
             background-color: white;
+       
 
             .info {
 

@@ -27,4 +27,15 @@ car =[
      { name:"Frarri",liter:'70L',manual:"manual",price:"3000/" ,people:"4"},
   ]
 
+
+  //this is for heart toggle
+  heart:boolean=true
+
+  toggleheart(){
+this.heart=!this.heart
+console.log("heart is workings");
+
+
+  }
+
 }

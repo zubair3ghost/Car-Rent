@@ -19,13 +19,42 @@
       <i class="fa-solid fa-bars " *ngIf="icon" (click)="toggle()"></i>
       <i class="fa-solid fa-xmark" *ngIf="!icon" (click)="toggle()"></i>
     </div>
-    <div class="user">
-      <img src="assets/image/header/account.svg" alt="" *ngIf="!userService.token">
-      <img src="assets/image/header/download.jpg" alt="" *ngIf="userService.token" style="width:30px;height:30px;border-radius: 50%">
 
-        <p routerLink="/sign-up">{{userService.token ? username : 'Sign in'}}</p>
-        
+
+    <!-- this is usesr pannel and here we create favourite history logout and one more link  -->
+    <div class="user" [class.toggle]="menue"> <!-- Apply toggle class based on menue -->
+      <img src="assets/image/header/account.svg" alt="" *ngIf="!userService.token" (click)="imgtoggle()">
+      <img src="assets/image/header/download.jpg" alt="" *ngIf="userService.token" (click)="imgtoggle()"
+        style="width:30px;height:30px;border-radius: 50%">
+    
+      <div class="panel">
+          <div class="flex" routerLink="/user-pannel" routerLinkActive="activate">
+            <img src="assets/image/header/Profile.svg "alt="">
+            <p>Profile</p>
+          </div>
+
+          <div class="flex" routerLink="/favourite" routerLinkActive="activate">
+            <img src="assets/image/header/favourite.svg "alt="">
+            <p>Favourite</p>
+          </div>
+          <div class="flex" routerLink="/history" routerLinkActive="activate">
+            <img src="assets/image/header/history.svg "alt="">
+            <p>History</p>
+          </div>
+          <div class="flex"  routerLinkActive="activate">
+            <img src="assets/image/header/Exit.svg "alt="" >
+            <p  (click)="loguot()">Logout</p>
+          </div>
+       
+        <!-- <ul>  
+          <li>favourite</li> 
+          <li>history</li>
+          <li>Logout</li>
+        </ul> -->
+      </div>
+          <p routerLink="/sign-up">{{userService.token ? username : 'Sign in'}}</p>
     </div>
+    
   </div>
 
 

@@ -11,6 +11,7 @@ import { NewPasswordComponent } from './new-password/new-password.component';
 import { FormsModule } from '@angular/forms';
 import {   RouterModule } from '@angular/router';
 import { NgOtpInputModule } from 'ng-otp-input';
+import { Otp1Component } from './otp1/otp1.component';
 
 
 
@@ -21,7 +22,8 @@ import { NgOtpInputModule } from 'ng-otp-input';
     OtpComponent,
     
     ForgetAccountComponent,
-    NewPasswordComponent
+    NewPasswordComponent,
+    Otp1Component
   ],
   imports: [
     CommonModule,FormsModule ,RouterModule , NgOtpInputModule

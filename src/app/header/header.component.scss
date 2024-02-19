@@ -99,29 +99,109 @@ justify-content: space-between;
     }
    
 }
-.user{
-    padding-right:2rem ;
+// .user{
+//     padding-right:2rem ;
+//     display: flex;
+//     align-items: center;
+//     gap: 7px;
+//     @media(max-width:650px){
+//          padding-right: 5px;
+//     }
+
+// //this is just testing
+// .panel {
+//     position: absolute;//pannel is default class
+//     top: -200px;
+ 
+//   }
+
+//   &.toggle .panel {
+//     //this is the toggle class
+
+//     position: absolute;
+//     top: 61px;
+//     right: 134px;
+
+
+//   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//     p{
+//         color: #000;
+//         font-family: Poppins;
+//         font-size: 17px;
+//         cursor: pointer;
+//     }
+//     img{
+//         width: auto;
+//         @media(max-width:650px){
+//             width: 35px;
+//         }
+       
+        
+//     }
+// }
+
+.user {
+    padding-right: 2rem;
     display: flex;
     align-items: center;
     gap: 7px;
-    @media(max-width:650px){
-         padding-right: 5px;
+    cursor: pointer;
+    
+    @media (max-width: 650px) {
+      padding-right: 5px;
     }
-    p{
-        color: #000;
-        font-family: Poppins;
-        font-size: 17px;
+  
+    .panel {
+      display: none; // Initially hide the panel
+    }
+  
+    &.toggle .panel {
+      display: block; // Show the panel when the toggle class is applied to the parent .user div
+      position: absolute;
+      top: 61px;
+      right: 100px;
+      background-color: white;
+      width: 180px;
+      @media (max-width:650px){
+        top: 40px;
+        right: 33px;
+      }
+      .flex{
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        gap: 12px;
         cursor: pointer;
-    }
-    img{
-        width: auto;
-        @media(max-width:650px){
-            width: 35px;
+
+        &.activate{
+           background-color: orange;
+           
         }
-       
-        
+      }
     }
-}
+  }
+  
+
+
+
+
 
 }
 

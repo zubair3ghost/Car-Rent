@@ -89,7 +89,10 @@
         height: 56px;
         border-radius: 10px;
         border: 1px solid var(--Greyscale-200, #E2E8F0);
-        
+        @media(max-width:480px) {
+          width: 100%;
+        }
+      
 
      img{
       width: 30px;
@@ -111,7 +114,7 @@
          font-size: 15px;
 
          @media(max-width:480px) {
-           width: 100%;
+           width: 90%;
          }
      }
 

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { HttpService } from 'src/app/services/http.service';
 
 @Component({
   selector: 'app-new-password',
@@ -7,12 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewPasswordComponent implements OnInit {
 
-  constructor() { }
+  constructor( private http:HttpService,private route:Router) { }
 
   ngOnInit(): void {
   }
   submit(value:any){
-    console.log(value);
+    console.log(value,"this is submit value before api hitting");
+    this.http.newpassword(value).subscribe((password)=>{
+      console.log(password,"this is the new password after tha previos one");
+      
+    })
+
+
     
     }
     showPassword = false;
@@ -23,5 +31,7 @@ export class NewPasswordComponent implements OnInit {
        show2=false
     togglePasswordVisibility1() {
       this.show2 = !this.show2;
+      
+      
     }
 }

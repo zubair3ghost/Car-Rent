@@ -11,12 +11,22 @@ export class HttpService{
     constructor(private http: HttpClient){}
 
     signUp(body: any){
+        
         return this.http.post(`${this.BASE_PATH}/auth/signup`, body)
     }
     otpSignup(body:any){
+        console.log(body,"otp body");
+        
         return this.http.post(`${this.BASE_PATH}/auth/validateOTP`,body)
     }
     signIn(body:any){
         return this.http.post(`${this.BASE_PATH}/auth/login`,body)
+    }
+    forgetaccount(body:any){
+        return this.http.post(`${this.BASE_PATH}/auth/forgetPassword`,body)
+    }
+    //after forget account api we call set new password api
+    newpassword(body:any){
+        return this.http.post(`${this.BASE_PATH}/auth/resetPassword`,body)
     }
 }

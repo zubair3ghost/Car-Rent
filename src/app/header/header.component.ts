@@ -16,6 +16,16 @@ export class HeaderComponent implements OnInit {
       this.username = this.userService.user.username;
     }
   }
+ 
+  menue:boolean=false
+imgtoggle(){
+this.menue=!this.menue
+// console.log("toggel  of image  is working");
+
+}
+
+
+
 
   show=false
   icon=true;
@@ -23,7 +33,11 @@ export class HeaderComponent implements OnInit {
     this.icon= !this.icon
    
     this.show= !this.show
-    console.log("toggle console is working");
+    // console.log("toggle console is working");
+  }
+
+  loguot(){
+    localStorage.clear()
   }
 
 }

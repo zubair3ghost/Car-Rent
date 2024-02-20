@@ -11,29 +11,30 @@ export class ForgetAccountComponent implements OnInit {
 
   constructor(private http:HttpService,private route:Router,private activeroute:ActivatedRoute) { }
 currentpage:string=""
-  ngOnInit(): void {
-this.currentpage=this.activeroute.snapshot.url[0].path
-// console.log(this.currentpage,'this is current  page of forget account ');
+ngOnInit(): void {
+  const email = 'example@example.com'; // Replace with the actual email value
+  this.set(email);
+}
 
+set(email: string): void {
+  localStorage.setItem("email", email);
+}
 
-  }
-
-
+// set(email: string): void {
+//   localStorage.setItem("email", email);
+// }
   
   //this is just testing for email checking
   submit(value:any){
     console.log(value);
     this.http.forgetaccount(value).subscribe((result:any)=>{
-  console.log(result,"this is response chechking");
-  
-      if(result){
-        //if we not ser type any then this will show error
-           let res=result.data?.email
-        console.log(res);
-        
-        
+        console.log(result,"result of emial valid response");
+        let email=result.data.email
+        localStorage.setItem("email", email);
+           
+      
         this.route.navigate(['/otp1'])
-      }
+       
       
     })
     }

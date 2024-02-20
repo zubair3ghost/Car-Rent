@@ -1,4 +1,4 @@
- 
+
 
 import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router'
@@ -17,43 +17,35 @@ export class Otp1Component implements OnInit {
   @ViewChild(NgOtpInputComponent, { static: false }) ngOtpInput: NgOtpInputComponent | undefined;
 
   constructor(private route: Router,
-     private otpservice: HttpService,
-      private userService: UserService,
-      private activeroute:ActivatedRoute         
-      ) { }
-
- 
-
-
-
+    private otpservice: HttpService,
+    private userService: UserService,
+    private activeroute: ActivatedRoute
+  ) { }
   ngOnInit(): void {
 
-    
-   
+
   }
 
 
   test: any;
   enteredOTP: any = ''
   validateotp(value: any) {
-    console.log(value);
-
-    const email = this.userService.user.email;
-    console.log(email, "email")
-
+    let email = localStorage.getItem('email')
     this.otpservice.otpSignup({
       "email": email,
       enteredOTP: parseInt(this.enteredOTP)
-      
+
     }).subscribe((response: any) => {
       this.enteredOTP = response;
+      console.log(this.enteredOTP, 'this is entered otp');
+
       console.log(response, "this is the response");
       const { data } = response;
 
-      if(data?.token){
+      if (data?.token) {
         this.userService.token = data.token;
-        this.route.navigate(['/'])
-      }else{
+        this.route.navigate(['/new-password'])
+      } else {
         alert("Otp is not valid")
       }
     })
@@ -68,6 +60,7 @@ export class Otp1Component implements OnInit {
 
 
   //this si for otp boxes functionality 
+
   onOtpChange(event: any) {
     this.enteredOTP = event;
   }

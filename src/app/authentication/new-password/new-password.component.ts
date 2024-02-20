@@ -14,15 +14,25 @@ export class NewPasswordComponent implements OnInit {
   ngOnInit(): void {
   }
   submit(value:any){
-    console.log(value,"this is submit value before api hitting");
-    this.http.newpassword(value).subscribe((password)=>{
-      console.log(password,"this is the new password after tha previos one");
+    let email=localStorage.getItem('email')
+    console.log(email,'this is just localemail');
+    console.log();
+    
+    // console.log(value,"this is submit value before api hitting");
+     this.http.newpassword(value).subscribe((response)=>{
+     
+
       
     })
 
 
     
     }
+
+
+
+
+    //this is for  toggle method 
     showPassword = false;
     
     togglePasswordVisibility() {

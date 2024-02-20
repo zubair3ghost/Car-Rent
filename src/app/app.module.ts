@@ -13,6 +13,7 @@ import { VehicalListingModule } from './vehical-listing/vehical-listing.module';
 import { ContactModule } from './contact/contact.module';
 import { NgOtpInputModule } from 'ng-otp-input';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { HttpInterceptorService } from './interceptors/http-interceptor.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,14 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
   exports: [  
     FormsModule
   ],
-  providers: [],
+  providers: [
+    // {
+    //   provide: HTTP_INTERCEPTORS,
+    //   useClass: HttpInterceptorService,
+    //   multi: true
+    // }
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

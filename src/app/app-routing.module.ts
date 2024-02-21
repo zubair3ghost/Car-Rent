@@ -14,39 +14,48 @@ import { UserPannelComponent } from './contact/user-pannel/user-pannel.component
 import { HistoryComponent } from './contact/history/history.component';
 import { FavouriteComponent } from './contact/favourite/favourite.component';
 import { Otp1Component } from './authentication/otp1/otp1.component';
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
 
   {
     path:'sign-up',
-    component:SignUpComponent
+    component:SignUpComponent,
+    
   },
   {
     path:'login',
-    component:LoginComponent
+    component:LoginComponent,
+  
   },
   {
     path:'otp',
-    component:OtpComponent
+     component:OtpComponent,
+    
   },
   {
     path:'otp1',
-    component:Otp1Component
+    component:Otp1Component,
+    
   },
 
 
   {
     path:'forget-account',
-    component:ForgetAccountComponent
+    component:ForgetAccountComponent,
+ 
   },
   {
     path:'new-password',
-    component:NewPasswordComponent
+    component:NewPasswordComponent,
+    
   },
   {
     path:'home',
     component:HomeCarComponent
+    
   }
+
   // this is vehical listing module 
   ,{
     path:'required',
@@ -67,15 +76,18 @@ const routes: Routes = [
   },
   {
     path:'user-pannel',
-    component:UserPannelComponent
+    component:UserPannelComponent,
+    canActivate: [AuthGuard], 
   },
   {
     path:'history',
-    component:HistoryComponent
+    component:HistoryComponent,
+    canActivate: [AuthGuard], 
   },
   {
     path:'favourite',
-    component:FavouriteComponent
+    component:FavouriteComponent,
+    canActivate: [AuthGuard], 
   },
 ];
 

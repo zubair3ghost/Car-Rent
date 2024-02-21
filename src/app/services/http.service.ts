@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Injectable } from "@angular/core";
+import { UserService } from "./user.service";
 
 @Injectable({
     providedIn: 'root'
@@ -8,7 +9,7 @@ import { Injectable } from "@angular/core";
 export class HttpService{
 
     BASE_PATH: string = 'http://40.117.141.7:5000';
-    constructor(private http: HttpClient){}
+    constructor(private http: HttpClient,private userservice: UserService){}
 
     signUp(body: any){
         
@@ -24,16 +25,17 @@ export class HttpService{
     }
     forgetaccount(body:any){
         return this.http.post(`${this.BASE_PATH}/auth/forgetPassword`,body
-        ,    {
-            headers:new HttpHeaders({
-               "Authorization"     :"Bearer "
-            })
-        }
+        , 
         )
     }
     //after forget account api we call set new password api
     newpassword(body:any){
         return this.http.post(`${this.BASE_PATH}/auth/resetPassword`,body,
+        {
+            headers:new HttpHeaders({
+               "Authorization"     :"Bearer "+ localStorage.getItem("token")
+            })
+        }
     
         )
     }

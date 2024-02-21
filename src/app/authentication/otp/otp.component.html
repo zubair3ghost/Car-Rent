@@ -16,12 +16,13 @@
 
         <form #otp="ngForm" (ngSubmit)="validateotp(otp.value)">
             
-        <ng-otp-input #otpInput (onInputChange)="onOtpChange($event)" [config]="{length:6}"></ng-otp-input>
+        <ng-otp-input class="otp"  #otpInput (onInputChange)="onOtpChange($event)" [config]="{length:6}"></ng-otp-input>
 
         
         
           
           <!-- <ng-otp-input  [formCtrl]="YourFormControl"  [config]="{length:5}"></ng-otp-input> -->
+
           <p>0:59</p>
   
           <!-- this is button toggle when form is not filled -->

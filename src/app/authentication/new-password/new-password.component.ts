@@ -14,12 +14,27 @@ export class NewPasswordComponent implements OnInit {
   ngOnInit(): void {
   }
   submit(value:any){
+
+    console.log(value,"this  is pass and confirm pass value");
+    
+     let password =value.newPassword
+     let confirmpass= value.confirmPassword
+     delete value.confirmPassword;
+     console.log(value, 'value not after deleting')
+console.log(password,'this is test password');
+console.log(confirmpass,'this is test confirmpassword');
+
+
+
+
     let email=localStorage.getItem('email')
     console.log(email,'this is just localemail');
-    console.log();
+    
     
     // console.log(value,"this is submit value before api hitting");
      this.http.newpassword(value).subscribe((response)=>{
+     console.log(response,"this is api responswe from newpassword");
+     this.route.navigate(['/home'])
      
 
       

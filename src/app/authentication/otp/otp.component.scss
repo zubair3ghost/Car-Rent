@@ -81,7 +81,12 @@
   
         form {
            
-
+      .otp{
+        display: flex;
+    align-items: center;
+    justify-content: space-around;
+  
+      }
         
             p{
                 text-align: center;
@@ -93,7 +98,7 @@
     
           button {
             display: flex;
-            width: 404px;
+            width: 344px;
             height: 56px;
             padding: 8px;
             justify-content: center;
@@ -109,9 +114,13 @@
             font-weight: 500;
             border: none;
   
-            @media(max-width:480px) {
-              width: 100%;
+            @media(max-width:770px) {
+              width: 300px; 
             }
+            
+            // @media(max-width:470px) {
+            //   width: 250px; 
+            // }
   
   
           }

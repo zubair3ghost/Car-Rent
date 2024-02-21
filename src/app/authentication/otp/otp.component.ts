@@ -36,7 +36,7 @@ export class OtpComponent implements OnInit, AfterViewInit {
   test: any;
   enteredOTP: any = ''
   validateotp(value: any) {
-    console.log(value);
+    // console.log(value);
 
     const email = this.userService.user.email;
     console.log(email, "email")
@@ -57,7 +57,7 @@ export class OtpComponent implements OnInit, AfterViewInit {
         alert("Otp is not valid")
       }
     })
-    console.log("otp method is working", value);
+    // console.log("otp method is working", value);
 
   }
 

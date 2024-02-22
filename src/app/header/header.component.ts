@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { UserService } from '../services/user.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -9,12 +10,18 @@ import { UserService } from '../services/user.service';
 export class HeaderComponent implements OnInit {
   username: string = ''
 
-  constructor(public userService: UserService) { }
+  constructor(
+    public userService: UserService,
+ 
+    ) { }
+  @Input() hideHeaderFooter: boolean = false;
 
   ngOnInit(): void {
     if(this.userService.user){
       this.username = this.userService.user.username;
     }
+
+    
   }
  
   menue:boolean=false

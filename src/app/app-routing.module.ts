@@ -21,33 +21,37 @@ const routes: Routes = [
   {
     path:'sign-up',
     component:SignUpComponent,
+     data: { showHeader: true }
     
   },
   {
     path:'login',
     component:LoginComponent,
-  
+    data: { showHeader: true }
   },
   {
     path:'otp',
      component:OtpComponent,
+     data: { showHeader: true }
     
   },
   {
     path:'otp1',
     component:Otp1Component,
-    
+    data: { showHeader: true }
   },
 
 
   {
     path:'forget-account',
     component:ForgetAccountComponent,
+    data: { showHeader: true }
  
   },
   {
     path:'new-password',
     component:NewPasswordComponent,
+    data: { showHeader: true }
     
   },
   {

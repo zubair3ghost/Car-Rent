@@ -12,6 +12,9 @@ import { UserService } from 'src/app/services/user.service';
 export class SignUpComponent implements OnInit {
 
   constructor(private http: HttpService,private router:Router, private userService: UserService) { }
+  hideHeaderFooter = true; // Set this flag to true to hide header and footer
+
+
 
   ngOnInit(): void {
   }

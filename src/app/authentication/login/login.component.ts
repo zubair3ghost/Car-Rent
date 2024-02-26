@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
           delete data?.user?.otp;
           this.userservice.user = data;
           this.userservice.token = data?.token;
-        this.router.navigate(['/home'])
+        this.router.navigate([''])
       }
     })
     console.log(value);

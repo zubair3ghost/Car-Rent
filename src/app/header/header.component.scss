@@ -179,6 +179,7 @@ justify-content: space-between;
       right: 100px;
       background-color: white;
       width: 180px;
+      transition: all 0.5s ease-in;
       @media (max-width:650px){
         top: 40px;
         right: 33px;

@@ -34,7 +34,7 @@ console.log(confirmpass,'this is test confirmpassword');
     // console.log(value,"this is submit value before api hitting");
      this.http.newpassword(value).subscribe((response)=>{
      console.log(response,"this is api responswe from newpassword");
-     this.route.navigate(['/home'])
+     this.route.navigate([''])
      
 
       

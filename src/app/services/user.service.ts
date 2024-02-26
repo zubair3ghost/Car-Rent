@@ -6,6 +6,14 @@ import { Injectable } from "@angular/core";
 
 export class UserService {
 
+private  baseurl:string='http://40.117.141.7:5000';
+ 
+    getbaseurl(fileUrl: string){
+        return `${this.baseurl}/${fileUrl}`
+    }
+
+
+
     set token(token: string | null) {
         if (token) localStorage.setItem('token', token);
     }

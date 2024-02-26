@@ -52,7 +52,7 @@ export class OtpComponent implements OnInit, AfterViewInit {
 
       if(data?.token){
         this.userService.token = data.token;
-        this.route.navigate(['/home'])
+        this.route.navigate([''])
       }else{
         alert("Otp is not valid")
       }

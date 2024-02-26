@@ -55,4 +55,7 @@ export class LowerHomeComponent implements OnInit {
     })
   }
 
+
+  //for styling pop up
+
 }

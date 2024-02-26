@@ -14,6 +14,7 @@ import { ContactModule } from './contact/contact.module';
 import { NgOtpInputModule } from 'ng-otp-input';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { HttpInterceptorService } from './interceptors/http-interceptor.service';
+import { PopUpComponent } from './pop-up/pop-up.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HttpInterceptorService } from './interceptors/http-interceptor.service'
     HeaderComponent,
     HomeCarComponent,
     LowerHomeComponent,
-    FooterComponent
+    FooterComponent,
+    PopUpComponent
   ],
   imports: [
     BrowserModule,

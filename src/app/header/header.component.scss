@@ -23,36 +23,79 @@ justify-content: space-between;
 @media(max-width:975px){
     //always remember this logic because i am always forget it
     .items{
+      color: white;
         position: absolute !important;
         top:-170px;
         left: -2px;
+        color: white;
       }  
 
-    .showclass{
-       
+      .showclass {
         text-align: center;
         padding-block: 1rem;
-        
-        background-color: orange;
+        background-color: #081630;
+        color: white; /* Set text color to white */
         width: 100%;
         position: absolute !important;
         top: 68px;
         left: 2px;
         height: 300px;
-        @media(max-width:655px){
-            top: 45px;
+        
+        /* Apply transition to background-color and color properties */
+        transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+        
+        @media (max-width: 655px) {
+          top: 45px;
         }
+        
+        ul li {
+          display: flex !important;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding-block: 1rem;
+          color: inherit; /* Inherit text color from parent */
+          list-style: none; /* Remove default list styles */
+        }
+      
+        /* Target the <a> tag specifically */
+        ul li a {
+          color: white; /* Inherit text color from parent */
+          text-decoration: none; /* Remove underline if needed */
+        }
+      }
+      
+
+  
+      
+//     .showclass{
+       
+//         text-align: center;
+//         padding-block: 1rem;
+      
+//         background-color: #03045e;
+//         width: 100%;
+//         position: absolute !important;
+//         top: 68px;
+//         left: 2px;
+//         height: 300px;
+//         @media(max-width:655px){
+//             top: 45px;
+//         }
     
-          ul li{
-        display: flex !important;
-         flex-direction: column;
-         align-items: center;
-         justify-content: center;
-         padding-block: 1rem;
+//           ul li{
+//         display: flex !important;
+//          flex-direction: column;
+//          align-items: center;
+//          justify-content: center;
+//          padding-block: 1rem;  color: white !important;
+//          a {
+//           color: white;
+//          }
 
-}
+// }
 
-}
+// }
   
     
 }
@@ -66,7 +109,7 @@ justify-content: space-between;
     li {
         display: inline-block;
         padding-inline: 3rem;
-        color: #000;
+        color:white;
         font-family: Poppins;
         font-size: 17px;
         font-style: normal;
@@ -75,7 +118,7 @@ justify-content: space-between;
         a{
             text-decoration: none;
             cursor: pointer;
-            color: black;
+            
             &.activate{
                 border-bottom: 2px solid var(--button-color);
                 padding-top: 8px;
@@ -171,32 +214,69 @@ justify-content: space-between;
     .panel {
       display: none; // Initially hide the panel
     }
-  
     &.toggle .panel {
-      display: block; // Show the panel when the toggle class is applied to the parent .user div
+      display: block; /* Show the panel when the toggle class is applied to the parent .user div */
       position: absolute;
       top: 61px;
       right: 100px;
       background-color: white;
       width: 180px;
-      transition: all 0.5s ease-in;
-      @media (max-width:650px){
+      border-radius: 8px; /* Add rounded corners for a nicer appearance */
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow for depth */
+      opacity: 0; /* Initially hide the panel */
+      transition: opacity 0.5s ease-in-out; /* Apply transition to opacity for smooth fade-in/out effect */
+    
+      @media (max-width: 650px) {
         top: 40px;
         right: 33px;
       }
-      .flex{
+    
+      .flex {
         display: flex;
         align-items: center;
         padding: 10px;
         gap: 12px;
         cursor: pointer;
-
-        &.activate{
-           background-color: orange;
-           
+        transition: background-color 0.3s ease-in-out; /* Apply transition to background-color for smooth color change */
+    
+        &.activate {
+          background-color: orange;
         }
       }
     }
+    
+    /* When the toggle class is applied, show the panel */
+    &.toggle .panel {
+      opacity: 1;
+    }
+    
+  
+    // &.toggle .panel {
+    //   display: block; // Show the panel when the toggle class is applied to the parent .user div
+    //   position: absolute;
+    //   top: 61px;
+    //   right: 100px;
+    //   background-color: white;
+    //   width: 180px;
+     
+    //     transition: all 0.5s ease-in;
+    //   @media (max-width:650px){
+    //     top: 40px;
+    //     right: 33px;
+    //   }
+    //   .flex{
+    //     display: flex;
+    //     align-items: center;
+    //     padding: 10px;
+    //     gap: 12px;
+    //     cursor: pointer;
+
+    //     &.activate{
+    //        background-color: orange;
+           
+    //     }
+    //   }
+    // }
   }
   
 

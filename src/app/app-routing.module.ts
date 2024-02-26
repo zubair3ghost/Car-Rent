@@ -15,6 +15,7 @@ import { HistoryComponent } from './contact/history/history.component';
 import { FavouriteComponent } from './contact/favourite/favourite.component';
 import { Otp1Component } from './authentication/otp1/otp1.component';
 import { AuthGuard } from './auth.guard';
+import { PopUpComponent } from './pop-up/pop-up.component';
 
 const routes: Routes = [
 
@@ -93,6 +94,14 @@ const routes: Routes = [
     component:FavouriteComponent,
     canActivate: [AuthGuard], 
   },
+  //this is for pop up for showing result
+  {
+    path:'pop-up',
+    component:PopUpComponent
+  }
+
+
+
 ];
 
 @NgModule({

@@ -23,17 +23,19 @@ export class DetailComponent implements OnInit {
   data: any;
 
   ngOnInit(): void {
+     this.geteighthtcar()
+
     const carId = this.route.snapshot.paramMap.get('id');
     if(carId) this.getCarById(carId)
   }
-
+   //here we get car by id  only single car
   getCarById(id: string){
     this.http.getcarbyid(id).subscribe({
       next: (response: any) => {
         // console.log(response);
 
         const { data } = response;
-        console.log(data.carName,'this is car name of detail page');
+        // console.log(data.carName,'this is car name of detail page');
         
         if(data){
           let images: string[] = [];
@@ -50,19 +52,18 @@ export class DetailComponent implements OnInit {
       }
     })
   }
+
+   responsedata:any[]=[]
+  geteighthtcar(){    
+    this.http.geteight().subscribe((res:any)=>
+    {
+
+      this.responsedata=res.data
+      console.log(this.responsedata,'here is the proper data ');    
+    })
+  }
   
-  // ngOnInit(): void {
-
-  //   const carId= this.route.snapshot.paramMap.get('id');
-  //   this.http.getcarbyid(carId).subscribe((res)=>
-  //   {
-  //     this.data=res
-  //   })
-
-  // }
-
-
-
+  
 
 
   //this is just testing static array for  temporary  images for design
@@ -84,8 +85,10 @@ export class DetailComponent implements OnInit {
     { name:"Frarri",liter:'70L',manual:"manual",price:"3000/" ,people:"4"},
  ]
 
- heart:boolean=true
 
+
+ //toggle for heart
+ heart:boolean=true
  toggleheart(){
 this.heart=!this.heart
 console.log("heart is workings");

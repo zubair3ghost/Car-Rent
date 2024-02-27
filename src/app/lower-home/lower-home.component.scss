@@ -79,6 +79,7 @@
             p {
                 color: var(--button-color);
                 font-size: 20px;
+                cursor: pointer;
 
             }
 
@@ -192,9 +193,9 @@
 
                     .left {
                         p {
-
+                           font-size: 14px;
                             .price {
-                                font-size: 26px
+                                font-size: 20px
                             }
 
                             .gray {

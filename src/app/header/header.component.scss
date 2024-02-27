@@ -23,7 +23,7 @@ justify-content: space-between;
 @media(max-width:975px){
     //always remember this logic because i am always forget it
     .items{
-      color: white;
+      color: black;
         position: absolute !important;
         top:-170px;
         left: -2px;
@@ -34,7 +34,7 @@ justify-content: space-between;
         text-align: center;
         padding-block: 1rem;
         background-color: #081630;
-        color: white; /* Set text color to white */
+        color: white !important; /* Set text color to white */
         width: 100%;
         position: absolute !important;
         top: 68px;
@@ -60,7 +60,7 @@ justify-content: space-between;
       
         /* Target the <a> tag specifically */
         ul li a {
-          color: white; /* Inherit text color from parent */
+          color: white !important; /* Inherit text color from parent */
           text-decoration: none; /* Remove underline if needed */
         }
       }
@@ -109,7 +109,7 @@ justify-content: space-between;
     li {
         display: inline-block;
         padding-inline: 3rem;
-        color:white;
+        color:black;
         font-family: Poppins;
         font-size: 17px;
         font-style: normal;
@@ -118,6 +118,7 @@ justify-content: space-between;
         a{
             text-decoration: none;
             cursor: pointer;
+            color: black ;
             
             &.activate{
                 border-bottom: 2px solid var(--button-color);

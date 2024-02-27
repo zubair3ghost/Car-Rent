@@ -41,9 +41,29 @@ export class HttpService{
         )
     }
     //here   i handle  car api  for getting car 
-
+       //this method is for home page api and only 4 images  with limit of 4 can appear in  this
         getAllCar(){
             return this.http.get(`${this.BASE_PATH}/car/getAllCars?page=1&limit=4`)
+        }
+
+        getcarbyid(id :any){
+          return this.http.get(`${this.BASE_PATH}/car/getOneCar/${id}`);
+        }
+
+        geteight(){
+            return this.http.get(`${this.BASE_PATH}/car/getAllCars?page=1&limit=8`)  
+        }
+
+         
+
+
+          //for favourite 
+        favoritecar(id:any){
+            return this.http.post(`${this.BASE_PATH}/fav/favoriteCar`,id)  
+        }
+        //for unfavourite  car 
+        unfavoritecar(id:any){
+            return this.http.post(`${this.BASE_PATH}/fav/unFavoriteCars`,id)  
         }
 
 

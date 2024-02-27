@@ -27,7 +27,7 @@
 
         <div class="links">
             <p class="gray">Recent</p>
-            <p>View All</p>
+            <p routerLink="/required">View All</p>
         </div>
         <div class="cars">
             <div class="first"  *ngFor="let item of getvar">
@@ -45,7 +45,7 @@
                 </div>
                 <div class="middle">
               
-                    <img src="{{item.bannerImage}}" alt="">
+                    <img   routerLink="/detail" src="{{item.bannerImage}}" alt="">
                 </div>
                 <div class="lower-middle">
                     <div class="flex">
@@ -63,11 +63,14 @@
                 </div>
                 <div class="bottom">
                     <div class="left">
-                        <p>pkr. <span class="price">{{item.price}}</span> <span class="gray">day</span> </p>
+                        <p>pkr. <span class="price">{{item.price}}/</span> <span class="gray">day</span> </p>
 
                     </div>
                     <div class="right">
-                        <button routerLink="/detail">Rent Now</button>
+                  
+                        <button [routerLink]="['/detail', item._id]">Rent Now</button>
+                        <!-- <button routerLink="/detail">Rent Now</button> -->
+
                     </div>
                 </div>
 

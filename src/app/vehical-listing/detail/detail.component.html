@@ -3,15 +3,16 @@
     <div class="top-detail">
         <div class="left">
             <div class="upper">
-                <img src="assets/image/required/big-car.svg" alt="">
+                <img [src]="data?.mainImage" alt="">
 
             </div>
             <div class="lower">
-                <img src="assets/image/required/View-6.svg" alt="">
-                <img src="assets/image/required/View-5.svg" alt="">
+                <img [src]="item" alt="" *ngFor="let item of data?.images">
+                <!-- <img [src]="item" alt="" *ngFor="let item of data?.images"> -->
+                <!-- <img src="assets/image/required/View-5.svg" alt="">
                 <img src="assets/image/required/View-4.svg" alt="">
                 <img src="assets/image/required/View-3.svg" alt="">
-                <img src="assets/image/required/View-2.svg" alt="">
+                <img src="assets/image/required/View-2.svg" alt=""> -->
   
             </div>
         </div>
@@ -20,7 +21,7 @@
 
 
             <div class="nissan-star">
-            <h3>Nissan GT - R</h3>
+            <h3>{{data.carName}}</h3>
             <div class="images">
                 <img src="assets/image/required/star.svg" alt="">
                 <img src="assets/image/required/star.svg" alt="">
@@ -159,6 +160,7 @@
 
 
 <!-- thsi is  showing car section  -->
+
 <div class="right">
 
     <!-- thsi is  testing but we can handle it through ts file -->

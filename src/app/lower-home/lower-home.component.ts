@@ -16,18 +16,18 @@ export class LowerHomeComponent implements OnInit {
     // this.baseurl=this.userservice.getbaseurl()
     this.getcar()
   }
-  getvar: {
-
-    price: number
-    companyName: string,
-    carType: string
-    capcity: string,
-    bannerImage: string
-    capacity: string,
-    carDesc: string
-    fuelCapacity: string
-  }[] = []; 
-
+  // getvar: {
+  //    id:string
+  //   price: number
+  //   companyName: string,
+  //   carType: string
+  //   capcity: string,
+  //   bannerImage: string
+  //   capacity: string,
+  //   carDesc: string
+  //   fuelCapacity: string
+  // }[] = []; 
+  getvar: any[] = [];
   
 
 

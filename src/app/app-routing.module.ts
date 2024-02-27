@@ -67,7 +67,7 @@ const routes: Routes = [
     component:RequiredComponent
   },
   {
-    path:'detail',
+    path:'detail/:id',
     component:DetailComponent
   },
   {

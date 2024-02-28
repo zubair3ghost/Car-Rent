@@ -58,7 +58,12 @@ export class DetailComponent implements OnInit {
     this.http.geteight().subscribe((res:any)=>
     {
 
-      this.responsedata=res.data
+      this.responsedata =res.data.map((car: any) => {
+        return{
+          ...car,
+          bannerImage: this.user.getbaseurl(car.bannerImage)
+        }
+      }); 
       console.log(this.responsedata,'here is the proper data ');    
     })
   }
@@ -91,7 +96,7 @@ export class DetailComponent implements OnInit {
  heart:boolean=true
  toggleheart(){
 this.heart=!this.heart
-console.log("heart is workings");
+ 
 
 
  }

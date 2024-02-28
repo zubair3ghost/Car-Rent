@@ -112,7 +112,7 @@
 <!-- thsi is  testing but we can handle it through ts file -->
  
 <div class="cars">
-  <div class="first" *ngFor="let item of car">
+  <div class="first" *ngFor="let item of responsedata | paginate : {itemsPerPage, totalItems, currentPage}">
 
       <div class="upper">
           <div class="lefty">
@@ -125,7 +125,7 @@
           </div>
       </div>
       <div class="middle">
-          <img src="assets/image/l-home/honda.svg" alt="">
+          <img src="assets/image/l-home/honda.svg">
       </div>
       <div class="lower-middle">
           <div class="flex">
@@ -153,6 +153,7 @@
 
 
   </div>
+  <pagination-controls (pageChange)="pageChange($event)"></pagination-controls>
   <!-- this is for  -->
    
 

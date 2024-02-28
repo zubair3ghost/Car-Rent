@@ -51,9 +51,12 @@ export class HttpService{
         }
 
         geteight(){
-            return this.http.get(`${this.BASE_PATH}/car/getAllCars?page=1&limit=8`)  
+            return this.http.get(`${this.BASE_PATH}/car/getAllCars?page=1&limit=8`)    
         }
 
+        required(){
+            return this.http.get(`${this.BASE_PATH}/car/getAllCars?page=1&limit=26`)  
+        }
          
 
 

@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { DetailComponent } from './detail/detail.component';
 import { BillingRentalComponent } from './billing-rental/billing-rental.component';
 import { FormsModule } from '@angular/forms';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 
@@ -15,7 +16,7 @@ import { FormsModule } from '@angular/forms';
     BillingRentalComponent
   ],
   imports: [
-    CommonModule,RouterModule,FormsModule
+    CommonModule,RouterModule,FormsModule, NgxPaginationModule
   ]
 })
 export class VehicalListingModule { }

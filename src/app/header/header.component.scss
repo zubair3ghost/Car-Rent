@@ -3,8 +3,16 @@
     display: flex;
      align-items:center;
      justify-content: space-between;
-     @media(max-width:650px){
-        padding: .4rem;
+     @media (max-width: 650px) {
+      padding: .4rem;
+    }
+  
+    &.fixed {
+      position: fixed; /* Make the navbar fixed at the top */
+      top: 0; /* Position it at the top of the viewport */
+      width: 100%; /* Occupy the full width of the viewport */
+      z-index: 1000; /* Ensure it's above other content */
+      background-color: white;
     }
 
 
@@ -221,7 +229,7 @@ justify-content: space-between;
       top: 61px;
       right: 100px;
       background-color: white;
-      width: 180px;
+      width: 245px;
       border-radius: 8px; /* Add rounded corners for a nicer appearance */
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow for depth */
       opacity: 0; /* Initially hide the panel */
@@ -232,23 +240,71 @@ justify-content: space-between;
         right: 33px;
       }
     
+
+      .top-flex{
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        gap: 12px;
+        cursor: pointer;
+        border-bottom: 1px gray  solid;
+        p{
+          font-size: 12px;
+        }
+     h4{
+      font-size: 14px;
+     }
+        img{
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+        }
+      }
+
       .flex {
         display: flex;
         align-items: center;
         padding: 10px;
         gap: 12px;
         cursor: pointer;
-        transition: background-color 0.3s ease-in-out; /* Apply transition to background-color for smooth color change */
-    
-        &.activate {
-          background-color: orange;
+        transition: background-color 0.3s ease-in-out; // Apply transition to background-color for smooth color change
+      
+        &:hover {
+          background-color: #081630;
+          color: white;
+      
+          img {
+            filter: grayscale(100%) invert(100%); // Adjust the filter for image hover effect
+          }
+      
+          p {
+            color: white; // Change text color on hover
+          }
         }
       }
+      
+
+      // .flex {
+      //   display: flex;
+      //   align-items: center;
+      //   padding: 10px;
+      //   gap: 12px;
+      //   cursor: pointer;
+      //   transition: background-color 0.3s ease-in-out; /* Apply transition to background-color for smooth color change */
+      //   & :hover {
+      //     background-color: #081630;
+      //     color: white;
+      //   }
+      //   // &.activate {
+      //   //   background-color: orange;
+      //   // }
+      // }
     }
     
     /* When the toggle class is applied, show the panel */
     &.toggle .panel {
       opacity: 1;
+      padding: 10px;
     }
     
   

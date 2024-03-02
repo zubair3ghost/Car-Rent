@@ -1,4 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, HostListener, Renderer2, } from '@angular/core';
+
+
 import { UserService } from '../services/user.service';
 import { ActivatedRoute } from '@angular/router';
 
@@ -9,41 +11,55 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
   username: string = ''
+    usertokkken: string | null = this.userService.token
+  menue: boolean = false
 
   constructor(
     public userService: UserService,
- 
-    ) { }
+    private renderer: Renderer2
+
+  ) { }
   @Input() hideHeaderFooter: boolean = false;
 
+
   ngOnInit(): void {
-    if(this.userService.user){
+    if (this.userService.user) {
       this.username = this.userService.user.username;
     }
 
-    
+
+  }
+
+  //for fixing navbar 
+  fixed: boolean = false;
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const navbar = document.querySelector('.nav-container') as HTMLElement; // Cast to HTMLElement
+    const navbarOffsetTop = navbar.getBoundingClientRect().top;
+    if (window.scrollY > navbarOffsetTop) {
+      this.renderer.addClass(navbar, 'fixed');
+      this.fixed = true;
+    } else {
+      this.renderer.removeClass(navbar, 'fixed');
+      this.fixed = false;
+    }
   }
  
-  menue:boolean=false
-imgtoggle(){
-this.menue=!this.menue
-// console.log("toggel  of image  is working");
 
-}
+  imgtoggle() {
+    this.menue = !this.menue
+  }
+  
+  show = false
+  icon = true;
+  toggle() {
+    this.icon = !this.icon
 
-
-
-
-  show=false
-  icon=true;
-  toggle(){
-    this.icon= !this.icon
-   
-    this.show= !this.show
+    this.show = !this.show
     // console.log("toggle console is working");
   }
 
-  loguot(){
+  loguot() {
     localStorage.clear()
   }
 

@@ -26,10 +26,28 @@ export class OtpComponent implements OnInit, AfterViewInit {
 
 
   ngOnInit(): void {
-
+    this.startTimer()
     this.otpObject.email=history.state.useremail
     // console.log(this.otpObject.email,  "this is from otp ngoninit method");
     
+  }
+
+  //this method for  timer  countdown
+  timer: number = 59;
+
+ 
+
+ 
+
+  startTimer(): void {
+    const countdown = () => {
+      if (this.timer > 0) {
+        this.timer--;
+        setTimeout(countdown, 1000); // Call countdown function recursively every second
+      }
+    };
+
+    countdown();
   }
 
 

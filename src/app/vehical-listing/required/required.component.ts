@@ -41,7 +41,7 @@ car =[
   responsedata:any[]=[]
 
   geteighthtcar(){    
-    this.http.geteight().subscribe((res:any)=>
+    this.http.required().subscribe((res:any)=>
     {
        
       this.responsedata =res.data.map((car: any) => {
@@ -61,14 +61,39 @@ car =[
 
 
 
-  //this is for heart toggle
-  heart:boolean=true
-
-  toggleheart(){
-this.heart=!this.heart
-console.log("heart is workings");
-
-
+  //this method for favourite and unfovourite in toggle base
+  favourite(id:any){
+    this.http.favoritecar(id).subscribe((res)=>{
+        console.log(res,'here  is favourite api id');
+        
+    })
+   }
+  
+   unfavourite(id:any){
+    this.http.unfavoritecar(id).subscribe((res)=>{
+        console.log(res,'here  is favourite api id');
+        
+    })
+   }
+  
+  
+  
+  
+   //toggle for heart
+   heart:boolean=true
+   toggleheart(item:any){
+    const carId = item._id;
+   
+    if(item.isFavourite==false){
+    this.favourite({carId})
+  }else{
+    this.unfavourite({carId})
   }
+   
+  item.isFavourite = !item.isFavourite;
+  
+  // 
+  
+   }
 
 }

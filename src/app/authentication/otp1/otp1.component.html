@@ -22,12 +22,18 @@
         
           
           <!-- <ng-otp-input  [formCtrl]="YourFormControl"  [config]="{length:5}"></ng-otp-input> -->
-          <p>0:59</p>
+          <p>{{ timer }}</p>
   
           <!-- this is button toggle when form is not filled -->
-          <button [disabled]="otp.invalid && otp.touched" 
+
+<div class="btn">
+  <button [disabled]="otp.invalid && otp.touched" 
           [style.background]="otp.invalid && otp.touched? 'gray' : ' #3563E9'"
            [style.color]="otp.invalid ? 'white' : 'white'">Continue </button>
+
+</div>
+
+        
   
    
            

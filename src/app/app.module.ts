@@ -16,6 +16,13 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { HttpInterceptorService } from './interceptors/http-interceptor.service';
 import { PopUpComponent } from './pop-up/pop-up.component';
 
+
+//mat modules for pop up
+// import {MatDialogModule} from '@angular/material/dialog';
+// import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+// import {MatButtonModule} from '@angular/material/button';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,17 +36,20 @@ import { PopUpComponent } from './pop-up/pop-up.component';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule, FormsModule,
-    AuthenticationModule, VehicalListingModule, ContactModule, NgOtpInputModule
+    AuthenticationModule, VehicalListingModule, ContactModule, NgOtpInputModule,
+
+    // BrowserAnimationsModule ,MatDialogModule,MatButtonModule,MatSlideToggleModule 
+
   ],
   exports: [  
     FormsModule
   ],
   providers: [
-    // {
-    //   provide: HTTP_INTERCEPTORS,
-    //   useClass: HttpInterceptorService,
-    //   multi: true
-    // }
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpInterceptorService,
+      multi: true
+    }
 
   ],
   bootstrap: [AppComponent]

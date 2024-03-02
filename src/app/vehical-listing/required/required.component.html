@@ -116,34 +116,34 @@
 
       <div class="upper">
           <div class="lefty">
-              <h5>{{item.name}}</h5>
+              <h5>{{item.carName}}</h5>
               <p>Sport</p>
           </div>
           <div class="righty" >
-              <img src="assets/image/l-home/red-heart.svg" alt="" (click)="toggleheart()" *ngIf="!heart"    >
-              <img src="assets/image/l-home/white-heart.svg" width="23px" (click)="toggleheart()" *ngIf="heart"  >
+            <img src="assets/image/l-home/red-heart.svg" alt="" (click)="toggleheart( item)" *ngIf="!item.isFavourite"    >
+            <img src="assets/image/l-home/white-heart.svg" width="23px" (click)="toggleheart(item)" *ngIf="item.isFavourite"  >
           </div>
       </div>
       <div class="middle">
-          <img src="assets/image/l-home/honda.svg">
+          <img  src="{{item.bannerImage}}">
       </div>
       <div class="lower-middle">
           <div class="flex">
               <img src="assets/image/l-home/gas-station.svg" alt="">
-              <p>{{item.liter}}</p>
+              <p>90L</p>
           </div>
           <div class="flex">
               <img src="assets/image/l-home/manual.svg" alt="">
-              <p>{{item.manual}}</p>
+              <p>Mannual</p>
           </div>
           <div class="flex">
               <img src="assets/image/l-home/people.svg" alt="">
-              <p>{{item.people}}</p>
+              <p> 4poeple </p>
           </div>
       </div>
       <div class="bottom">
           <div class="lefty">
-              <p>pkr. <span class="price">{{item.price}}</span> <span class="gray">day</span> </p>
+              <p>pkr. <span class="price">{{item.price}}/</span> <span class="gray">day</span> </p>
 
           </div>
           <div class="right">

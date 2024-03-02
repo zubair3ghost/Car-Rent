@@ -22,7 +22,7 @@ export class Otp1Component implements OnInit {
     private activeroute: ActivatedRoute
   ) { }
   ngOnInit(): void {
-
+this.startTimer()
 
   }
 
@@ -51,6 +51,19 @@ export class Otp1Component implements OnInit {
     })
     console.log("otp method is working", value);
 
+  }
+
+  //this is for   countdown timer
+  timer: number = 59;
+  startTimer(): void {
+    const countdown = () => {
+      if (this.timer > 0) {
+        this.timer--;
+        setTimeout(countdown, 1000); // Call countdown function recursively every second
+      }
+    };
+
+    countdown();
   }
 
 

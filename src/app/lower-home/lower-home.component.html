@@ -39,9 +39,10 @@
                             
                         <p>{{item.carType}}</p>
                     </div>
-                    <div class="right">
-                        <img src="assets/image/l-home/red-heart.svg" alt="">
-                    </div>
+                    <div class="righty" >
+                        <img src="assets/image/l-home/red-heart.svg" alt="" (click)="toggleheart( item)" *ngIf="!item.isFavourite"    >
+                        <img src="assets/image/l-home/white-heart.svg" width="23px" (click)="toggleheart(item)" *ngIf="item.isFavourite"  >
+                      </div>
                 </div>
                 <div class="middle">
               
@@ -141,8 +142,12 @@
     <div class="input"> 
         <input type="text" placeholder="Enter your email" name="email" ngModel  #emailInput="ngModel" required 
         maxlength="30" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
-      
-    <button>next</button>
+   
+        
+<!-- 
+            <button  mat-raised-button color="primary"  (click)="opendialogue()"  > click me</button> -->
+          
+    <button     >next</button>
    
 </div>
 <span *ngIf="emailInput.touched && emailInput.hasError('pattern')" style="color: red;">Enter a valid email address</span>

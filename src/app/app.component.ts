@@ -24,33 +24,5 @@ export class AppComponent implements OnInit{
       // Accessing the data property directly to check if showHeader is set
       this.showHeader = !this.activatedRoute.firstChild?.snapshot.data['showHeader'];
     });
-  }
-
-
-
-
-
-
-
-
-
-
-
-// this code is for  single component but when we have multiple comoponent then we dont apply this instead we apply upper method
-  // showHeader: boolean = false;
-
-  // constructor(private router: Router) {}
-
-  // ngOnInit(): void {
-  //   this.router.events.subscribe(event => {
-  //     if (event instanceof NavigationEnd) {
-  //       // Check if the current route is '/sign-up' and set showHeader accordingly
-  //       this.showHeader = !event.url.includes('/sign-up');
-  //     }
-  //   });
-  // }
-    
-
- 
-       
+  }       
 }

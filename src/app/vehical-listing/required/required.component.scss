@@ -235,11 +235,11 @@
                     background-color: white;
                     border-radius: 10px;
                     width: 32%;
-                    &:hover{
+                    // &:hover{
                        
-                        transition:  .5s all ease;
-                        transform: scale(.9);
-                    }
+                    //     transition:  .5s all ease;
+                    //     transform: scale(.9);
+                    // }
     
                     @media(max-width:1204px) {
     
@@ -323,7 +323,7 @@
                             p {
     
                                 .price {
-                                    font-size: 26px
+                                    font-size: 20px
                                 }
     
                                 .gray {

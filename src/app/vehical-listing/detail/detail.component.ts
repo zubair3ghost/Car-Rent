@@ -70,34 +70,37 @@ export class DetailComponent implements OnInit {
   
   
 
+ favourite(id:any){
+  this.http.favoritecar(id).subscribe((res)=>{
+      console.log(res,'here  is favourite api id');
+      
+  })
+ }
 
-  //this is just testing static array for  temporary  images for design
-  car =[
-   
-    { name:"swift",liter:'90L',manual:"manual",price:"4000/",people:"4" },
+ unfavourite(id:any){
+  this.http.unfavoritecar(id).subscribe((res)=>{
+      console.log(res,'here  is favourite api id');
+      
+  })
+ }
 
-
-    { name:"Honda",liter:'80L',manual:"manual",price:"8000/",people:"3" },
-    { name:"Mehran",liter:'70L',manual:"manual",price:"5000/",people:"5" },
-    { name:"Frarri",liter:'70L',manual:"manual",price:"3000/" ,people:"4"},
-    { name:"swift",liter:'90L',manual:"manual",price:"4000/",people:"4" },
-    { name:"Honda",liter:'80L',manual:"manual",price:"8000/",people:"3" },
-    { name:"Mehran",liter:'70L',manual:"manual",price:"5000/",people:"5" },
-    { name:"Frarri",liter:'70L',manual:"manual",price:"3000/" ,people:"4"},
-    { name:"swift",liter:'90L',manual:"manual",price:"4000/",people:"4" },
-    { name:"Honda",liter:'80L',manual:"manual",price:"8000/",people:"3" },
-    { name:"Mehran",liter:'70L',manual:"manual",price:"5000/",people:"5" },
-    { name:"Frarri",liter:'70L',manual:"manual",price:"3000/" ,people:"4"},
- ]
 
 
 
  //toggle for heart
  heart:boolean=true
- toggleheart(){
-this.heart=!this.heart
+ toggleheart(item:any){
+  const carId = item._id;
  
+if(item.isFavourite){
+  this.favourite({carId})
+}else{
+  this.unfavourite({carId})
+}
+ 
+item.isFavourite = !item.isFavourite;
 
+// 
 
  }
 

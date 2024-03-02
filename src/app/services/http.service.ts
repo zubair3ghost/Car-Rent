@@ -55,18 +55,20 @@ export class HttpService{
         }
 
         required(){
-            return this.http.get(`${this.BASE_PATH}/car/getAllCars?page=1&limit=26`)  
+            return this.http.get(`${this.BASE_PATH}/car/getAllCars?page=1&limit=27`)  
         }
          
 
 
           //for favourite 
-        favoritecar(id:any){
+        favoritecar(id:any){        
             return this.http.post(`${this.BASE_PATH}/fav/favoriteCar`,id)  
         }
         //for unfavourite  car 
         unfavoritecar(id:any){
-            return this.http.post(`${this.BASE_PATH}/fav/unFavoriteCars`,id)  
+            console.log(id,'this is unfovorrite car id');
+            
+            return this.http.post(`${this.BASE_PATH}/fav/unFavoriteCar`,id)  
         }
 
 

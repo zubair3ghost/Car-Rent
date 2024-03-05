@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpService } from 'src/app/services/http.service';
 
 @Component({
   selector: 'app-billing-rental',
@@ -7,13 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BillingRentalComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private http:HttpService
+  ) { }
 
   ngOnInit(): void {
   }
 
 submitbilling(value:any){
      console.log(value,"this is billling form this shows form is working propely");
+this.http.createOrder(value).subscribe((res)=>{
+console.log(res,"thsi is the response  of  billing info ");
+
+  
+})
      
 
 }

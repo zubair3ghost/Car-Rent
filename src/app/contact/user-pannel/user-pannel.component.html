@@ -6,15 +6,27 @@
           <div class="user-image">
 
                <div class="left">
-
-                    <img src="assets/image/contact/user-img.svg" alt="">
+<!-- 
+                    <img src="assets/image/contact/user-img.svg" alt=""> -->
                     <!-- this is the topic soon search it how input is connnected to label and upload  -->
 
-                    <label for="profileImage">Upload Picture</label>
+                    <!-- <label for="profileImage">Upload Picture</label>
                     <input type="file" id="profileImage" style="display: none;" (change)="handleUpload($event)"/>
+                    <img src="{{firstImg}} " alt=""> -->
+                    <div class="second">
+          
+                         <div class="input">
+                              <input type="file" id="first" style="display: none;" name="profileImage" (change)="handleUpload($event)" accept="image/*" ngModel #profileImageInput="ngModel" required>
+                              <img [src]="userService.getbaseurl(this.profileImage)" alt="" style="width: 100px; height: 100px; background-color: lightgray;">
+                              <label for="first">Upload Picture</label>
+                          </div>
+                          
+                      
+                    
+                     </div>
                </div>
                <div class="right">
-                    <button  [disabled]="userpannel.invalid">Save Profile</button>
+                    <button   type="submit" >Save Profile</button>
                </div>
 
  
@@ -29,20 +41,20 @@
                     <label for="">
                          Full Name
                     </label>
-                    <input type="text" placeholder="Jhon" ngModel required name="name" #name="ngModel" >
+                    <input type="text" placeholder="Jhon" ngModel required name="fullName" #fullName="ngModel" >
                     <span
                    
-                    *ngIf="name.invalid  && name.touched "> Enter right name</span>
+                    *ngIf="fullName.invalid  && fullName.touched "> Enter right name</span>
                </div>
                <div class="input">
 
                     <label for="">
                          Email
                     </label>
-                    <input type="text" placeholder="Jhon@gmail.com"  ngModel required name="emailinput"
-                     #emailinput="ngModel"        maxlength="30" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"      >
-                     <span *ngIf="emailinput.touched && emailinput.hasError('pattern')">Enter a valid email address</span>
-                     <span *ngIf="emailinput.touched && emailinput.hasError('required')">Email is required</span>
+                    <input type="text" placeholder="Jhon@gmail.com"  ngModel required name="email"
+                     #email="ngModel"        maxlength="30" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"      >
+                     <span *ngIf="email.touched && email.hasError('pattern')">Enter a valid email address</span>
+                     <span *ngIf="email.touched && email.hasError('required')">Email is required</span>
                    
 
                     
@@ -53,10 +65,10 @@
                     <label for="">
                          Phone
                     </label>
-                    <input type="text" placeholder="03121189233"  ngModel required name="phone" #phone="ngModel"
+                    <input type="text" placeholder="03121189233"  ngModel required name="mobile" #mobile="ngModel"
                     [maxlength]="11"
             required pattern="[0-9]*">
-                    <span *ngIf="phone.invalid  && phone.touched "> Enter right phone numeber</span>
+                    <span *ngIf="mobile.invalid  && mobile.touched "> Enter right phone numeber</span>
 
                </div>
                <div class="input">
@@ -64,9 +76,9 @@
                     <label for="postalCode">
                          Post Code
                     </label>
-                    <input type="text"   #postalCode="ngModel" name="postalCode" ngModel required pattern="^[A-Z]{2}\d{4}$"
+                    <input type="text"   #postcode="ngModel" name="postcode" ngModel required pattern="^[A-Z]{2}\d{4}$"
                     maxlength="10" minlength="3">
-                        <span *ngIf="postalCode.invalid && postalCode.touched"> 
+                        <span *ngIf="postcode.invalid && postcode.touched"> 
                         Enter the right code
                     </span>
                </div>
@@ -79,6 +91,16 @@
                     <span *ngIf=" address.invalid && address.touched"> Enter yuor address</span> 
 
                </div>
+
+               <div class="input">
+
+                    <label for="">
+                         city
+                    </label>
+                    <input type="text" placeholder="New York" required  ngModel name="city"  #city="ngModel"> 
+                    <span *ngIf=" address.invalid && address.touched"> Enter yuor city</span> 
+
+               </div>
                <div class="radio">
 
                     <label for="">
@@ -87,11 +109,11 @@
                     <div class="parent">
                          <div class="child-radio">
                            <label for="male">Male</label>
-                           <input type="radio" id="male" name="gender" value="male" ngModel required #genderModel="ngModel">
+                           <input type="radio" id="male" name="gender" value="male" ngModel required #gender="ngModel">
                          </div>
                          <div class="child-radio">
                            <label for="female">Female</label>
-                           <input type="radio" id="female" name="gender" value="female" ngModel required #genderModel="ngModel">
+                           <input type="radio" id="female" name="gender" value="female" ngModel required #gender="ngModel">
                          </div>
                       
                        </div>
@@ -111,27 +133,40 @@
            <label for="">
                Driving Licence
            </label>
-           <input type="text">
+           <input type="text" name="licenseNo" ngModel  #licenseNo="ngModel">
         </div>
-        <div class="second">
+      
 
-           <div class="input">
-               <label for="">Car Licence Back Image</label>
-               <input type="text"  placeholder="Upload your licence back image 
-                ">
+        <div class="second">
+          <div class="input">
+               <input type="file" id="imageInput2" name="frontImage" style="display: none;" (change)="onFileSelected2($event)" accept="image/*" ngModel #frontImageInput="ngModel" required>
+               <img [src]="userService.getbaseurl(frontImage)" alt="Upload your licence back image, Supported Formats: JPG, PNG,; Max File Size:5MB." style="width: 100px;height: 100px;background-color: lightgray;">
            </div>
            <div class="btn">
-               <button>Upload Picture</button>
+               <label for="imageInput2">Upload Picture</label>
            </div>
+           
+      </div>
+      <div class="second">
+          <div class="input">
+               <input type="file" id="img" name="backImage" style="display: none;" (change)="onFileSelected3($event)" accept="image/*" ngModel #backImageInput="ngModel" required>
+               <img [src]="userService.getbaseurl(backImage)" alt="Upload your licence back image, Supported Formats: JPG, PNG,; Max File Size:5MB." style="width: 100px;height: 100px;background-color: lightgray;">
+           </div>
+           
+          <div class="btn">
+              <label for="img">Upload Picture</label>
+          </div>
+      </div>
+      
+      
+      
 
 
-
-        </div>
-        <div class="second">
+        <!-- <div class="second">
 
           <div class="input">
               <label for="">Car Licence Back Image</label>
-              <input type="text"  placeholder="Upload your licence back image 
+              <input type="image"  placeholder="Upload your licence back image 
               ">
           </div>
           <div class="btn">
@@ -140,7 +175,7 @@
 
 
 
-       </div>
+       </div> -->
 
      </div>
 
@@ -151,6 +186,19 @@
      </form>
 
 </div>
-<a href="/history">
-     history
-</a>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- here is the doplicate  copy of  this whole page -->
+

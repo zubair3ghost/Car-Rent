@@ -71,7 +71,7 @@ const routes: Routes = [
     component:DetailComponent
   },
   {
-    path:'billing-rental',
+    path:'billing-rental/:id',
     component:BillingRentalComponent
   },
   // contact us module here route is here

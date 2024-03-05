@@ -71,9 +71,33 @@ export class HttpService{
             return this.http.post(`${this.BASE_PATH}/fav/unFavoriteCar`,id)  
         }
 
+        //this section is  for user profile api s
+
+        createProfile(body:any){
+            return this.http.post(`${this.BASE_PATH}/profile/createProfile`,body)
+        }
 
 
 
+        // thsi section is for  contace  us api
+
+    createContactUs(body:any){        
+            return this.http.post(`${this.BASE_PATH}/contact/createContact`,body)  
+        }
+
+
+        //this section is for create order
+        createOrder(body:any){
+
+            return this.http.post(`${this.BASE_PATH}/order/createOrder`,body)   
+        }
+
+        //this api for single upload api method  
+        singleUpload(body:any){
+            console.log(body.data,'this is api response here');
+            
+            return this.http.post(`${this.BASE_PATH}/car/singleUpload`,body)   
+        }
 
 
 }

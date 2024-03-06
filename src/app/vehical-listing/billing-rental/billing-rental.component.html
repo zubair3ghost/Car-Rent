@@ -12,7 +12,7 @@
                         <p>Please enter your billing info</p>
                     </div>
                     <div class="right-info">
-                        <p>Step 1 of 4</p>
+                        <p>Step 1 of 3</p>
                     </div>
                 </div>
 
@@ -31,7 +31,7 @@
                     <div class="input">
 
                         <label for="">Phone Number</label>
-                        <input type="text" placeholder=""  ngModel required name="phone" #phone="ngModel"
+                        <input type="text" placeholder="Phone number"  ngModel required name="phone" #phone="ngModel"
                     [maxlength]="11"
             required pattern="[0-9]*">
                     <span *ngIf="phone.invalid  && phone.touched "> Enter right phone numeber</span>
@@ -85,7 +85,7 @@
                         <p>Please enter your Rental info</p>
                     </div>
                     <div class="right-info">
-                        <p>Step 1 of 4</p>
+                        <p>Step 2 of 3</p>
                     </div>
                 </div>
                 <div class="box-1">
@@ -96,7 +96,7 @@
                     <div class="flex-input">
 
 
-                        <div class="input">
+                        <div class="input">  
 
                             <label for="location">Location</label>
                             <input type="text"  placeholder="Select your city" ngModel required  name="location" #location="ngModel">
@@ -179,7 +179,7 @@
                         <p>We are getting to the end. Just few clicks and your rental is ready!</p>
                     </div>
                     <div class="right-confirm">
-                        <p>Step 4 of 4</p>
+                        <p>Step 3 of 3</p>
                     </div>
                 </div>
 

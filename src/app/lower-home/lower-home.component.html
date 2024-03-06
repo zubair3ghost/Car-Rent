@@ -59,7 +59,7 @@
                     </div>
                     <div class="flex">
                         <img src="assets/image/l-home/people.svg" alt="">
-                        <p>4 People</p>
+                        <p>4 People</p>  
                     </div>
                 </div>
                 <div class="bottom">
@@ -146,11 +146,11 @@
         <input type="text" placeholder="Enter your email" name="email" ngModel  #emailInput="ngModel" required 
         maxlength="30" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
    
-        
-<!-- 
-            <button  mat-raised-button color="primary"  (click)="opendialogue()"  > click me</button> -->
+        <button (click)="openDialog()"> next</button>
+
+           
           
-    <button     >next</button>
+    <!-- <button     >next</button> -->
    
 </div>
 <span *ngIf="emailInput.touched && emailInput.hasError('pattern')" style="color: red;">Enter a valid email address</span>

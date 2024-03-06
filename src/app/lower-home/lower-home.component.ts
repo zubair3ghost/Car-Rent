@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../services/http.service';
 import { UserService } from '../services/user.service';
-// import { PopUpComponent } from '../pop-up/pop-up.component';
-// import { MatDialog } from '@angular/material/dialog';
+import { PopUpComponent } from '../pop-up/pop-up.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-lower-home',
@@ -10,11 +10,13 @@ import { UserService } from '../services/user.service';
   styleUrls: ['./lower-home.component.scss']
 })
 export class LowerHomeComponent implements OnInit {
+  // matdialog: any;
 
   constructor(
     private http: HttpService,
     private userservice:UserService,
-    // private matdialog:MatDialog
+    private matdialog:MatDialog,
+    private dialog:MatDialog
     ) { }
   baseurl:string=' '
 
@@ -23,17 +25,22 @@ export class LowerHomeComponent implements OnInit {
     this.getcar()
   }
 
+  //this  is just testing for closing pop up on  click
+  openDialog() {
+    this.dialog.open(PopUpComponent);
+  }
+
   // this  is for pop up showing method is in pending because of the  problem so kal krai gai
-  // opendialogue(){
-  //   console.log('here is open diallogue is working');
+  opendialogue(){
+    console.log('here is open diallogue is working');
     
-  //   this.matdialog.open(PopUpComponent,{
-  //     width:"300px",
-  //     height:"300px",
-  //     panelClass: 'my-custom-dialog' 
+    this.matdialog.open(PopUpComponent,{
+      width:"300px",
+      height:"300px",
+      panelClass: 'my-custom-dialog' 
       
-  //   })    
-  //     }
+    })    
+      }
 
 
 

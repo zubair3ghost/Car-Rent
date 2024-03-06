@@ -1,204 +1,183 @@
 <div class="user-pannel">
 
-     <form #userpannel="ngForm"   (ngSubmit)="pannelform(userpannel.value)"> 
-    
-     <div class="white-div">
-          <div class="user-image">
+     <form #userpannel="ngForm" (ngSubmit)="pannelform(userpannel.value)">
 
-               <div class="left">
-<!-- 
-                    <img src="assets/image/contact/user-img.svg" alt=""> -->
-                    <!-- this is the topic soon search it how input is connnected to label and upload  -->
+          <div class="white-div">
+               <div class="user-image">
 
-                    <!-- <label for="profileImage">Upload Picture</label>
-                    <input type="file" id="profileImage" style="display: none;" (change)="handleUpload($event)"/>
-                    <img src="{{firstImg}} " alt=""> -->
-                    <div class="second">
-          
-                         <div class="input">
-                              <input type="file" id="first" style="display: none;" name="profileImage" (change)="handleUpload($event)" accept="image/*" ngModel #profileImageInput="ngModel" required>
-                              <img [src]="userService.getbaseurl(this.profileImage)" alt="" style="width: 100px; height: 100px; background-color: lightgray;">
-                              <label for="first">Upload Picture</label>
-                          </div>
-                          
-                      
-                    
-                     </div>
-               </div>
-               <div class="right">
-                    <button   type="submit" >Save Profile</button>
-               </div>
-
- 
-          </div>
-
-             
-          
-          <div class="inputs-detail">
-
-               <div class="input">
-
-                    <label for="">
-                         Full Name
-                    </label>
-                    <input type="text" placeholder="Jhon" ngModel required name="fullName" #fullName="ngModel" >
-                    <span
-                   
-                    *ngIf="fullName.invalid  && fullName.touched "> Enter right name</span>
-               </div>
-               <div class="input">
-
-                    <label for="">
-                         Email
-                    </label>
-                    <input type="text" placeholder="Jhon@gmail.com"  ngModel required name="email"
-                     #email="ngModel"        maxlength="30" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"      >
-                     <span *ngIf="email.touched && email.hasError('pattern')">Enter a valid email address</span>
-                     <span *ngIf="email.touched && email.hasError('required')">Email is required</span>
-                   
-
-                    
-
-               </div>
-               <div class="input">
-
-                    <label for="">
-                         Phone
-                    </label>
-                    <input type="text" placeholder="03121189233"  ngModel required name="mobile" #mobile="ngModel"
-                    [maxlength]="11"
-            required pattern="[0-9]*">
-                    <span *ngIf="mobile.invalid  && mobile.touched "> Enter right phone numeber</span>
-
-               </div>
-               <div class="input">
-
-                    <label for="postalCode">
-                         Post Code
-                    </label>
-                    <input type="text"   #postcode="ngModel" name="postcode" ngModel required pattern="^[A-Z]{2}\d{4}$"
-                    maxlength="10" minlength="3">
-                        <span *ngIf="postcode.invalid && postcode.touched"> 
-                        Enter the right code
-                    </span>
-               </div>
-               <div class="input">
-
-                    <label for="">
-                         Address
-                    </label>
-                    <input type="text" placeholder="New York" required  ngModel name="address"  #address="ngModel"> 
-                    <span *ngIf=" address.invalid && address.touched"> Enter yuor address</span> 
-
-               </div>
-
-               <div class="input">
-
-                    <label for="">
-                         city
-                    </label>
-                    <input type="text" placeholder="New York" required  ngModel name="city"  #city="ngModel"> 
-                    <span *ngIf=" address.invalid && address.touched"> Enter yuor city</span> 
-
-               </div>
-               <div class="radio">
-
-                    <label for="">
-                 Gender
-                    </label>
-                    <div class="parent">
-                         <div class="child-radio">
-                           <label for="male">Male</label>
-                           <input type="radio" id="male" name="gender" value="male" ngModel required #gender="ngModel">
-                         </div>
-                         <div class="child-radio">
-                           <label for="female">Female</label>
-                           <input type="radio" id="female" name="gender" value="female" ngModel required #gender="ngModel">
-                         </div>
-                      
-                       </div>
-                       
+                    <div class="left">
                
+                         <div class="input">
+                              <input type="file" id="first" style="display: none;" name="profileImage"
+                                   (change)="handleUpload($event)" accept="image/*" ngModel #profileImageInput="ngModel"
+                                   required>
+                      
+                              <img class="img"  [src]="userService.getbaseurl(this.profileImage)" alt="">
+                              <label for="first">Upload Picture</label>
+                         </div>
+
+
+
+
+                    </div>
+                    <div class="right">
+                         <button type="submit">Save Profile</button>
+                    </div>
 
 
                </div>
-             
+
+
+
+               <div class="inputs-detail">
+
+                    <div class="input">
+
+                         <label for="">
+                              Full Name
+                         </label>
+                         <input type="text" placeholder="Jhon" ngModel required name="fullName" #fullName="ngModel">
+                         <span *ngIf="fullName.invalid  && fullName.touched "> Enter right name</span>
+                    </div>
+                    <div class="input">
+
+                         <label for="">
+                              Email
+                         </label>
+                         <input type="text" placeholder="Jhon@gmail.com" ngModel required name="email" #email="ngModel"
+                              maxlength="30" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+                         <span *ngIf="email.touched && email.hasError('pattern')">Enter a valid email address</span>
+                         <span *ngIf="email.touched && email.hasError('required')">Email is required</span>
+
+
+
+
+                    </div>
+                    <div class="input">
+
+                         <label for="">
+                              Phone
+                         </label>
+                         <input type="text" placeholder="03121189233" ngModel required name="mobile" #mobile="ngModel"
+                              [maxlength]="11" required pattern="[0-9]*">
+                         <span *ngIf="mobile.invalid  && mobile.touched "> Enter right phone numeber</span>
+
+                    </div>
+                    <div class="input">
+
+                         <label for="postalCode">
+                              Post Code
+                         </label>
+                         <input type="text" #postcode="ngModel" name="postcode" ngModel required
+                              pattern="^[A-Z]{2}\d{4}$" maxlength="10" minlength="3">
+                         <span *ngIf="postcode.invalid && postcode.touched">
+                              Enter the right code
+                         </span>
+                    </div>
+                    <div class="input">
+
+                         <label for="">
+                              Address
+                         </label>
+                         <input type="text" placeholder="New York" required ngModel name="address" #address="ngModel">
+                         <span *ngIf=" address.invalid && address.touched"> Enter yuor address</span>
+
+                    </div>
+
+                    <div class="input">
+
+                         <label for="">
+                              city
+                         </label>
+                         <input type="text" placeholder="New York" required ngModel name="city" #city="ngModel">
+                         <span *ngIf=" address.invalid && address.touched"> Enter yuor city</span>
+
+                    </div>
+                    <div class="radio">
+
+                         <label for="">
+                              Gender
+                         </label>
+                         <div class="parent">
+                              <div class="child-radio">
+                                   <label for="male">Male</label>
+                                   <input type="radio" id="male" name="gender" value="male" ngModel required
+                                        #gender="ngModel">
+                              </div>
+                              <div class="child-radio">
+                                   <label for="female">Female</label>
+                                   <input type="radio" id="female" name="gender" value="female" ngModel required
+                                        #gender="ngModel">
+                              </div>
+
+                         </div>
+
+
+
+
+                    </div>
+
+
+               </div>
+
+          </div>
+          <div class="second-white">
+
+               <div class="first">
+                    <label for="">
+                         Driving Licence
+                    </label>
+                    <input type="text" name="licenseNo" ngModel #licenseNo="ngModel">
+               </div>
+
+
+               <div class="second">
+                    <div class="input">
+                         <label for="">Car Licence Back Image</label>
+
+                         <input type="file" id="imageInput2" name="frontImage" style="display: none;"
+                              (change)="onFileSelected2($event)" accept="image/*" ngModel #frontImageInput="ngModel"
+                              required>
+                              <div class="ifimageNot"  *ngIf="!frontImage">
+                                   "Upload your licence back image, Supported Formats: JPG, PNG,; Max File Size:5MB."
+                              </div>
+                         <img class="imgofInput" *ngIf="frontImage" [src]="userService.getbaseurl(frontImage)"
+                              alt= ''>
+                    </div>
+                    <div class="btn">
+                         <label class="button" for="imageInput2">Upload Picture</label>
+                    </div>
+
+               </div>
+               <div class="second">
+
+                    <div class="input">
+                         <label for="">Car Licence Back Image</label>
+
+                         <input type="file" id="img" name="backImage" style="display: none;"
+                              (change)="onFileSelected3($event)" accept="image/*" ngModel #backImageInput="ngModel"
+                              required>
+                              <div class="ifimageNot" *ngIf="!backImage">
+                                   "Upload your licence back image, Supported Formats: JPG, PNG,; Max File Size:5MB."
+                              </div>
+                         <img class="imgofInput" *ngIf="backImage" [src]="userService.getbaseurl(backImage)"
+                              alt=>
+                    </div>
+
+                    <div class="btn">
+                         <label class="button" for="img">Upload Picture</label>
+                    </div>
+               </div>
+
+
+
 
           </div>
 
-     </div>
-     <div class="second-white">
 
-        <div class="first">
-           <label for="">
-               Driving Licence
-           </label>
-           <input type="text" name="licenseNo" ngModel  #licenseNo="ngModel">
-        </div>
-      
-
-        <div class="second">
-          <div class="input">
-               <input type="file" id="imageInput2" name="frontImage" style="display: none;" (change)="onFileSelected2($event)" accept="image/*" ngModel #frontImageInput="ngModel" required>
-               <img [src]="userService.getbaseurl(frontImage)" alt="Upload your licence back image, Supported Formats: JPG, PNG,; Max File Size:5MB." style="width: 100px;height: 100px;background-color: lightgray;">
-           </div>
-           <div class="btn">
-               <label for="imageInput2">Upload Picture</label>
-           </div>
-           
-      </div>
-      <div class="second">
-          <div class="input">
-               <input type="file" id="img" name="backImage" style="display: none;" (change)="onFileSelected3($event)" accept="image/*" ngModel #backImageInput="ngModel" required>
-               <img [src]="userService.getbaseurl(backImage)" alt="Upload your licence back image, Supported Formats: JPG, PNG,; Max File Size:5MB." style="width: 100px;height: 100px;background-color: lightgray;">
-           </div>
-           
-          <div class="btn">
-              <label for="img">Upload Picture</label>
-          </div>
-      </div>
-      
-      
-      
-
-
-        <!-- <div class="second">
-
-          <div class="input">
-              <label for="">Car Licence Back Image</label>
-              <input type="image"  placeholder="Upload your licence back image 
-              ">
-          </div>
-          <div class="btn">
-              <button>Upload Picture</button>
-          </div>
-
-
-
-       </div> -->
-
-     </div>
-
-     
 
 
 
      </form>
 
 </div>
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- here is the doplicate  copy of  this whole page -->
-

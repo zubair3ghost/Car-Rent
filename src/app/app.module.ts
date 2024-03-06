@@ -18,10 +18,11 @@ import { PopUpComponent } from './pop-up/pop-up.component';
 
 
 //mat modules for pop up
-// import {MatDialogModule} from '@angular/material/dialog';
-// import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-// import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-// import {MatButtonModule} from '@angular/material/button';
+import {MatDialogModule} from '@angular/material/dialog';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import {MatButtonModule} from '@angular/material/button';
+import { UserHeaderComponent } from './user-header/user-header.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { PopUpComponent } from './pop-up/pop-up.component';
     HomeCarComponent,
     LowerHomeComponent,
     FooterComponent,
-    PopUpComponent
+    PopUpComponent,
+    UserHeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +40,7 @@ import { PopUpComponent } from './pop-up/pop-up.component';
     AppRoutingModule, FormsModule,
     AuthenticationModule, VehicalListingModule, ContactModule, NgOtpInputModule,
 
-    // BrowserAnimationsModule ,MatDialogModule,MatButtonModule,MatSlideToggleModule 
+     BrowserAnimationsModule ,MatDialogModule,MatButtonModule,MatSlideToggleModule 
 
   ],
   exports: [  

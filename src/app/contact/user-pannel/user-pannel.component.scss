@@ -36,19 +36,32 @@
                         gap: 26px;
         align-items: center;
                     }
+                    .input{
 
-                    img {}
-
-                    label {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        border-radius: 6px;
-                        background: var(--blue, #3563E9);
-                        padding: 7px 14px;
+                        .img {
+                            height: 130px;
+                            width: 130px;
+                        background: #F6F7F9;
                         border: none;
-                        color: white;
+                        overflow: hidden;
+                        
+                            border-radius: 50%;
+                        }
+
+                        label {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border-radius: 6px;
+                            background: var(--blue, #3563E9);
+                            padding: 7px 14px;
+                            border: none;
+                            color: white;
+                        }
+
                     }
+
+                 
                 }
 
                 .right {
@@ -194,7 +207,7 @@
                 }
             }
 
-            .second {
+            .second {     
                 display: flex;
                 flex-direction: column;
                 align-items: end;
@@ -203,6 +216,8 @@
                 .input {
                     display: flex;
                     flex-direction: column;
+                    align-items: start;
+                    justify-content: start;
                     gap: 10px;
                     @media(max-width:480px){
                         width: 250px;
@@ -210,8 +225,24 @@
                     }
 
                     label {}
+                    .ifimageNot{
+                        display: flex;
+                        align-items: center;
+                        justify-self: center;
+                        text-align: center;
+                        color: gray;
+                        width: 352px;
+                        padding: 2rem;
+                        height: 164px;
+                        background: #F6F7F9;
+                        border: none;
+                        outline: none;
+                        @media(max-width:480px){
+                            width: 100%;
+                        }
+                    }
 
-                    input {
+                 .imgofInput {
                         color: gray;
                         width: 352px;
                         height: 164px;
@@ -221,19 +252,17 @@
                         @media(max-width:480px){
                             width: 100%;
                         }
-                     
-                       &::placeholder{
-
-                       text-align: center;
-                       padding-inline: 1rem;
-                       color: gray;
-                       }
+                      
                     }
+              
+                  
+                  
+                  
                 }
 
                 .btn {
                     padding-block:1rem ;
-                    button {
+                    .button {
                         padding:10px 1rem;
 
                         color: white;

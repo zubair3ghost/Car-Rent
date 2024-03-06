@@ -53,9 +53,9 @@
       <label for="make">Registration City</label>
        <select id="cars" name="cars">
          <option value="volvo">select option</option>
-         <option value="saab">Saab</option>
-         <option value="fiat">Fiat</option>
-         <option value="audi">Audi</option>
+         <option value="saab">Lahore </option>
+         <option value="fiat">Karachi</option>
+         <option value="audi">Multan</option>
        </select>
     </div>
     <div class="input">
@@ -148,13 +148,14 @@
           </div>
           <div class="right">
            
-              <button routerLink="/billing-rental">Rent Now</button>
+              <button [routerLink]="['/billing-rental', item._id]">Rent Now</button>
           </div>
       </div>
 
 
   </div>
-  <pagination-controls (pageChange)="pageChange($event)"></pagination-controls>
+
+
   <!-- this is for  -->
    
 
@@ -162,6 +163,10 @@
 
 
 
+
+</div>
+<div class="pagination-section" style="display: flex;align-items: center;justify-content: end;">
+  <pagination-controls (pageChange)="pageChange($event)"></pagination-controls>
 
 </div>
 

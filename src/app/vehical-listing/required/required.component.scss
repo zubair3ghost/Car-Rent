@@ -37,7 +37,7 @@
                         font-family: Poppins;
                         font-size: 14px;
                         font-style: normal;
-                        font-weight: 500;
+                        font-weight: 600;
                         line-height: 22px;
                         /* 157.143% */
                         letter-spacing: -0.408px;
@@ -50,7 +50,7 @@
                         width: 280px;
                         padding-block: 10px;
                         color: var(--gray, #A3AAAE);
-                        font-family:" Poppins";
+                        font-family: Poppins;
                         font-size: 14px;
                         font-style: normal;
 
@@ -70,7 +70,7 @@
                         font-family: "Poppins";
                         font-size: 14px;
                         font-style: normal;
-                        font-weight: 500;
+                        font-weight: 600;
                         line-height: normal;
                     }
 
@@ -79,6 +79,10 @@
                         align-items: center;
                         justify-content: space-between;
                         padding-right: 1rem;
+                        @media (max-width:755px) {
+                        padding-right: 1px;
+                            
+                        }
                       
 
                         p {
@@ -156,6 +160,11 @@
                             border-radius: 5px;
                             background: var(--white, #FFF);
                             padding: 9px 14px;
+                            cursor: pointer;
+                            &:hover{
+                                color: white;
+                                background-color: var(--button-color);
+                            }
                         }
                     }
                 }
@@ -167,7 +176,7 @@
                         font-family: Poppins;
                         font-size: 14px;
                         font-style: normal;
-
+                        font-weight: 600;
                         line-height: normal;
                     }
 
@@ -181,6 +190,11 @@
                             border-radius: 5px;
                             background: var(--white, #FFF);
                             padding: 9px 14px;
+                            cursor: pointer;
+                            &:hover{
+                                color: white;
+                                background-color: var(--button-color);
+                            }
                         }
                     }
                 }

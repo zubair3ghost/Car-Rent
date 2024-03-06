@@ -15,6 +15,7 @@ export class AppComponent implements OnInit{
   constructor(private router: Router, private activatedRoute: ActivatedRoute) {}
 
   ngOnInit(): void {
+    console.log("thsis is home condloke");
     
     
 

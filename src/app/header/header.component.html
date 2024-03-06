@@ -1,65 +1,63 @@
-
-
-  <div class="nav-container"  [class.fixed]="fixed">
+<div class="nav-container" [class.fixed]="fixed">
 
   <div class="left">
-    <img src="assets/image/header/Group.svg" alt="">  
-    
+    <img src="assets/image/header/Group.svg" alt="">
+
   </div>
   <div class="right">
-    <div class="items"  [class.showclass]="show" (click)="toggle()">
-        <ul >
-            <li  > <a routerLink=""  >Home</a>   </li>
-            <li  > <a  routerLink="/required" routerLinkActive="activate">Vehical listing</a>   </li>
-            <li  > <a  routerLink="/contact-info" routerLinkActive="activate">Contact Us</a>   </li>
-           
-        </ul>
+    <div class="items" [class.showclass]="show" (click)="toggle()">
+      <ul>
+        <li> <a routerLink="">Home</a> </li>
+        <li> <a routerLink="/required" routerLinkActive="activate">Vehical listing</a> </li>
+        <li> <a routerLink="/contact-info" routerLinkActive="activate">Contact Us</a> </li>
+
+      </ul>
     </div>
     <div class="icons">
-      <i class="fa-solid fa-bars " *ngIf="icon" (click)="toggle()"></i>
-      <i class="fa-solid fa-xmark" *ngIf="!icon" (click)="toggle()"></i>
+      <i class="fa-solid fa-bars " *ngIf="burgericon" (click)="toggle()"></i>
+      <i class="fa-solid fa-xmark" *ngIf="!burgericon" (click)="toggle()"></i>
 
 
-      
+
     </div>
 
 
     <!-- this is usesr pannel and here we create favourite history logout and one more link  -->
-    <div class="user" [class.toggle]="menue"> 
-      
+    <div class="user" [class.toggle]="menue">
+
       <img src="assets/image/header/account.svg" alt="" *ngIf="!userService.token" (click)="imgtoggle()">
       <img src="assets/image/header/download.jpg" alt="" *ngIf="userService.token" (click)="imgtoggle()"
         style="width:30px;height:30px;border-radius: 50%">
-    
+
       <div class="panel">
 
         <div class="top-flex" routerLink="/user-pannel" routerLinkActive="activate">
-          <img src="assets/image/header/download.jpg"alt="" width="30px">
+          <img src="assets/image/header/download.jpg" alt="" width="30px">
           <div class="inside-flex">
             <h4>user profile</h4>
             <!-- <h4>{{username}}</h4> -->
             <p>view and edit your profile</p>
           </div>
-          
-        </div>
-          <div class="flex" routerLink="/user-pannel" routerLinkActive="activate">
-            <img src="assets/image/header/Profile.svg "alt="">
-            <p>Profile</p>
-          </div>
 
-          <div class="flex" routerLink="/favourite" routerLinkActive="activate">
-            <img src="assets/image/header/favourite.svg "alt="">
-            <p>Favourite</p>
-          </div>
-          <div class="flex" routerLink="/history" routerLinkActive="activate">
-            <img src="assets/image/header/history.svg "alt="">
-            <p>History</p>
-          </div>
-          <div class="flex"  routerLinkActive="activate">
-            <img src="assets/image/header/Exit.svg "alt="" >
-            <p  (click)="loguot()">Logout</p>
-          </div>
-       
+        </div>
+        <div class="flex" routerLink="/user-pannel" routerLinkActive="activate">
+          <img src="assets/image/header/Profile.svg " alt="">
+          <p>Profile</p>
+        </div>
+
+        <div class="flex" routerLink="/favourite" routerLinkActive="activate">
+          <img src="assets/image/header/favourite.svg " alt="">
+          <p>Favourite</p>
+        </div>
+        <div class="flex" routerLink="/history" routerLinkActive="activate">
+          <img src="assets/image/header/history.svg " alt="">
+          <p>History</p>
+        </div>
+        <div class="flex" routerLinkActive="activate">
+          <img src="assets/image/header/Exit.svg " alt="">
+          <p (click)="loguot()">Logout</p>
+        </div>
+
         <!-- <ul>  
           <li>favourite</li> 
           <li>history</li>
@@ -67,11 +65,10 @@
         </ul> -->
       </div>
       <p routerLink="/sign-up" *ngIf="! usertokkken"> sign up</p>
-          <!-- <p routerLink="/sign-up">{{userService.token ? "username": 'Sign in'}}</p> -->
+      <!-- <p routerLink="/sign-up">{{userService.token ? "username": 'Sign in'}}</p> -->
     </div>
-    
+
   </div>
 
 
-  </div>
-  
+</div>

@@ -3,6 +3,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 220px;
+    border-radius: 15px;
     .image{
   
        img{
@@ -12,17 +14,24 @@
  
  
     }
-    p{
+    h2{
+      text-align: center;
+      font-weight: 5 00;
+    }
+    .p{
+      color: gray;
        text-align: center;
-       font-size: 14px;
+       font-size: 12px;
     }
     button{
        color: white;
-       background-color: blueviolet;
-       padding: 10px 20px;
+       font-size: 15px;
+       font-weight: 600;
+       background-color: #3563E9;
+       padding: 2px 20px;
        border: none;
        border-radius: 8px;
-       width: 100%;
+       width: 210px;
  
     }
  

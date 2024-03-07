@@ -13,8 +13,6 @@ export class UserHeaderComponent implements OnInit {
   }
 
 
-  loguot() {
-    localStorage.clear()
-  }
+   
 
 }

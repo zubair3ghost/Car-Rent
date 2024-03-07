@@ -70,6 +70,10 @@ export class HttpService{
             
             return this.http.post(`${this.BASE_PATH}/fav/unFavoriteCar`,id)  
         }
+        // getting all favourite carshttp://40.117.141.7:5000/fav/getFavouriteCars
+        getAllfavourite(){
+            return this.http.get(`${this.BASE_PATH}/fav/getFavouriteCars`)
+        }
 
         //this section is  for user profile api s
 
@@ -98,6 +102,12 @@ export class HttpService{
             
             return this.http.post(`${this.BASE_PATH}/car/singleUpload`,body)   
         }
+
+        //this is for history 
+        history(){
+            return this.http.get(`${this.BASE_PATH}/order/getUserOrder`)
+        }
+     
 
 
 }

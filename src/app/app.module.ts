@@ -23,6 +23,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import {MatButtonModule} from '@angular/material/button';
 import { UserHeaderComponent } from './user-header/user-header.component';
+// import { NgxIntlTelInputModule } from 'ngx-intl-tel-input';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,7 @@ import { UserHeaderComponent } from './user-header/user-header.component';
     AppRoutingModule, FormsModule,
     AuthenticationModule, VehicalListingModule, ContactModule, NgOtpInputModule,
 
-     BrowserAnimationsModule ,MatDialogModule,MatButtonModule,MatSlideToggleModule 
+     BrowserAnimationsModule ,MatDialogModule,MatButtonModule,MatSlideToggleModule
 
   ],
   exports: [  
@@ -58,3 +59,4 @@ import { UserHeaderComponent } from './user-header/user-header.component';
 })
 export class AppModule { }
 
+              // "./node_modules/intl-tel-input/build/css/intlTelInput.css",

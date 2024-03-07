@@ -23,32 +23,32 @@
                     <div class="input">
 
                         <label for="">Name</label>
-                        <input type="text" name="name" placeholder="Your name" ngModel required #name="ngModel"  >
+                        <input type="text" name="Name" placeholder="Your name" ngModel required #Name="ngModel"  >
                         <span
                    
-                        *ngIf="name.invalid  && name.touched "> Enter right name</span>
+                        *ngIf="Name.invalid  && Name.touched "> Enter right name</span>
                     </div>
                     <div class="input">
 
                         <label for="">Phone Number</label>
-                        <input type="text" placeholder="Phone number"  ngModel required name="phone" #phone="ngModel"
+                        <input type="text" placeholder="Phone number"  ngModel required name="PhoneNo" #PhoneNo="ngModel"
                     [maxlength]="11"
             required pattern="[0-9]*">
-                    <span *ngIf="phone.invalid  && phone.touched "> Enter right phone numeber</span>
+                    <span *ngIf="PhoneNo.invalid  && PhoneNo.touched "> Enter right phone numeber</span>
 
                     </div>
                     <div class="input">
 
                         <label for="">Address</label>
-                        <input type="text" placeholder="New York" required  ngModel name="address"  #address="ngModel"> 
-                        <span *ngIf=" address.invalid && address.touched"> Enter yuor address</span> 
+                        <input type="text" placeholder="New York" required  ngModel name="Address"  #Address="ngModel"> 
+                        <span *ngIf=" Address.invalid && Address.touched"> Enter yuor address</span> 
     
                     </div>
                     <div class="input">
 
                         <label for="town">Town/City</label>
-                        <input type="text" placeholder="New York" required  ngModel name="town"  #town="ngModel"> 
-                    <span *ngIf=" town.invalid && town.touched"> Enter yuor home address</span> 
+                        <input type="text" placeholder="New York" required  ngModel name="Town"  #Town="ngModel"> 
+                    <span *ngIf=" Town.invalid && Town.touched"> Enter yuor home address</span> 
 
                     </div>
 
@@ -99,22 +99,22 @@
                         <div class="input">  
 
                             <label for="location">Location</label>
-                            <input type="text"  placeholder="Select your city" ngModel required  name="location" #location="ngModel">
-                            <span *ngIf="location.invalid && location.touched"> Enter your location</span>
+                            <input type="text"  placeholder="Select your city" ngModel required  name="pickupLocation" #pickupLocation="ngModel">
+                            <span *ngIf="pickupLocation.invalid && pickupLocation.touched"> Enter your location</span>
                         </div>
                         <div class="input">
 
                             <label for="pickdate">Date</label>
-                            <input type="date"   placeholder="Select your date" ngModel required  name="pickdate"
-                            #pickdate="ngModel">
-                            <span *ngIf="pickdate.touched && pickdate.invalid">Enter pick up date</span>
+                            <input type="date"   placeholder="Select your date" ngModel required  name="pickupDate"
+                            #pickupDate="ngModel">
+                            <span *ngIf="pickupDate.touched && pickupDate.invalid">Enter pick up date</span>
                         </div>
                         <div class="input">
 
                             <label for="pickuptime">Time</label>
-                            <input type="tiem"  placeholder="Select your date" ngModel required  name="pickuptime"
-                            #picktime="ngModel">
-                            <span *ngIf="picktime.touched && picktime.invalid">Enter pick up time</span>
+                            <input type="tiem"  placeholder="Select your date" ngModel required  name="pickupTime"
+                            #pickupTime="ngModel">
+                            <span *ngIf="pickupTime.touched && pickupTime.invalid">Enter pick up time</span>
                         </div>
                     </div>
                 </div>
@@ -126,7 +126,7 @@
                 <div class="box-2">
                     <div class="radio">
                         <input type="radio" name="" id="">
-                        <label for="chek">Drop - Off</label>
+                        <label for="chek">Drop - Off</label>   
                     </div>
                     <div class="flex-input">
 
@@ -134,38 +134,25 @@
                         <div class="input">
 
                             <label for="location">Location</label>
-                            <input type="text"   placeholder="Select your city" ngModel required  name="location" #location="ngModel">
-                            <span *ngIf="location.invalid && location.touched"> Enter your location</span>
+                            <input type="text"   placeholder="Select your city" ngModel required  name="dropOffLocation" #dropOffLocation="ngModel">
+                            <span *ngIf="dropOffLocation.invalid && dropOffLocation.touched"> Enter your location</span>
                         </div>
                         <div class="input">
 
                             <label for="dropdate">Date</label>
-                            <input type="date"  placeholder="Select your date" ngModel required  name="dropdate"
-                            #dropdate="ngModel">
-                            <span *ngIf="dropdate.touched && dropdate.invalid">Enter pick up date</span>
+                            <input type="date"  placeholder="Select your date" ngModel required  name="dropOffDate"
+                            #dropOffDate="ngModel">
+                            <span *ngIf="dropOffDate.touched && dropOffDate.invalid">Enter pick up date</span>
                         </div>
                         <div class="input">
 
                             <label for="droptime">Time</label>
-                            <input type="tiem"   placeholder="Select your date" ngModel required  name="droptime"
-                            #droptime="ngModel">
-                            <span *ngIf="droptime.touched && droptime.invalid">Enter pick up time</span>
+                            <input type="tiem"   placeholder="Select your date" ngModel required  name="dropOffTime"
+                            #dropOffTime="ngModel">
+                            <span *ngIf="dropOffTime.touched && dropOffTime.invalid">Enter pick up time</span>
                         </div>
                     </div>
                 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
             </div>
@@ -185,12 +172,12 @@
 
                 <div class="check-box">
                     <div class="input-confirm">
-                        <input type="checkbox" name="first" ngModel required #first="ngModel" >
+                        <input type="checkbox" name="first"  >
                         <p>I agree with sending an Marketing and newsletter emails. No spam, promissed!</p>
-                        <span *ngIf="first.touched && first.invalid"> fill the reqquired conditons</span>
+                        <!-- <span *ngIf="first.touched && first.invalid"> fill the reqquired conditons</span> -->
                     </div>
                     <div class="input-confirm">
-                        <input type="checkbox" name="second"  ngModel required #first="ngModel" >
+                        <input type="checkbox" name="second" >
                         <p>I agree with our terms and conditions and privacy policy.</p>
                     </div>
 

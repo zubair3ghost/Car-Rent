@@ -12,8 +12,11 @@ import { FormsModule } from '@angular/forms';
 import {   RouterModule } from '@angular/router';
 import { NgOtpInputModule } from 'ng-otp-input';
 import { Otp1Component } from './otp1/otp1.component';
+// import { NgxIntlTelInputModule } from 'ngx-intl-tel-input';
 
-
+// import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+// import { ModalModule } from 'ngx-bootstrap/modal';
+// import { ButtonsModule } from 'ngx-bootstrap/buttons';
 
 @NgModule({
   declarations: [
@@ -23,10 +26,14 @@ import { Otp1Component } from './otp1/otp1.component';
     
     ForgetAccountComponent,
     NewPasswordComponent,
-    Otp1Component
+    Otp1Component,
+
   ],
   imports: [
-    CommonModule,FormsModule ,RouterModule , NgOtpInputModule
+    CommonModule,FormsModule ,RouterModule , NgOtpInputModule,
+    // BsDropdownModule,
+    // ModalModule,ButtonsModule
+
   ],
   exports:[
     FormsModule 

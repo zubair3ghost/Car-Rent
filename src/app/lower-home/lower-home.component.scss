@@ -15,6 +15,7 @@
         justify-content: center;
         gap: 10px;
         padding-block: 5rem;
+        // transition: .2s all ease;
 
         @media(max-width:950px) {
             flex-direction: column;
@@ -23,11 +24,11 @@
         }
 
         .left {
-            &:hover{
-                       
-                transition:  .5s all ease;
-                transform: scale(.9);
-            }
+            // &:hover {
+            //     /* Override transition on hover */
+            //     transition: .2s all ease;
+            //     transform: scale(.9);
+            // }
 
             img {
                 width: 83%;
@@ -118,15 +119,21 @@
                 border-radius: 10px;
                 width: 23%;
                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-                &:hover{
+                // &:hover{
                        
-                    transition:  .5s all ease;
-                    transform: scale(.9);
-                }
+                //     transition:  .5s all ease;
+                //     transform: scale(.9);
+                // }
 
                 @media(max-width:1226px) {
 
                     width: 33%;
+
+                }
+                
+                @media(max-width:1226px) {
+
+                    width: 43%;
 
                 }
 

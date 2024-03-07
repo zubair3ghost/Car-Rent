@@ -10,26 +10,30 @@
 
 
      <div class="content">
-
+ 
         <div class="cars">
-            <div class="first">
+            <div class="first"  *ngFor="let item of getvar">
+                <h2></h2>
 
                 <div class="upper">
                     <div class="left">
-                        <h5>Swift</h5>
-                        <p>Sport</p>
+                        <h5>{{item.companyName}}</h5>
+                            
+                        <p>{{item.carType}}</p>
                     </div>
-                    <div class="right">
-                        <img src="assets/image/l-home/red-heart.svg" alt="">
-                    </div>
+                    <div class="righty" >
+                        <img src="assets/image/l-home/red-heart.svg" alt="" (click)="toggleheart( item)" *ngIf="!item.isFavourite"    >
+                        <img src="assets/image/l-home/white-heart.svg" width="23px" (click)="toggleheart(item)" *ngIf="item.isFavourite"  >
+                      </div>
                 </div>
                 <div class="middle">
-                    <img src="assets/image/l-home/honda.svg" alt="">
+              
+                    <img   routerLink="/detail" src="{{item.bannerImage}}" alt="">
                 </div>
                 <div class="lower-middle">
                     <div class="flex">
                         <img src="assets/image/l-home/gas-station.svg" alt="">
-                        <p>90L</p>
+                        <p>{{item.fuelCapacity}}L </p>
                     </div>
                     <div class="flex">
                         <img src="assets/image/l-home/manual.svg" alt="">
@@ -37,107 +41,29 @@
                     </div>
                     <div class="flex">
                         <img src="assets/image/l-home/people.svg" alt="">
-                        <p>4 People</p>
+                        <p>4 People</p>  
                     </div>
                 </div>
                 <div class="bottom">
                     <div class="left">
-                        <p>pkr. <span class="price">4000/</span> <span class="gray">day</span> </p>
+                        <p>pkr. <span class="price">{{item.price}}/</span> <span class="gray">day</span> </p>
 
                     </div>
                     <div class="right">
-                        <button>Rent Now</button>
+                  
+
+
+                        <!-- this  is for  rooutiing with id  -->
+                        <button [routerLink]="['/detail', item._id]">Rent Now</button>
+                        <!-- <button routerLink="/detail">Rent Now</button> -->
+
                     </div>
                 </div>
 
 
             </div>
-            <!-- this is for  -->
-            <div class="first">
-
-                <div class="upper">
-                    <div class="left">
-                        <h5>Rolls - Royce</h5>
-                        <p>Sport</p>
-                    </div>
-                    <div class="right">
-                        <img src="assets/image/l-home/red-heart.svg" alt="">
-                    </div>
-                </div>
-                <div class="middle">
-                    <img src="assets/image/l-home/honda.svg" alt="">
-                </div>
-                <div class="lower-middle">
-                    <div class="flex">
-                        <img src="assets/image/l-home/gas-station.svg" alt="">
-                        <p>90L</p>
-                    </div>
-                    <div class="flex">
-                        <img src="assets/image/l-home/manual.svg" alt="">
-                        <p>Manual</p>
-                    </div>
-                    <div class="flex">
-                        <img src="assets/image/l-home/people.svg" alt="">
-                        <p>4 People</p>
-                    </div>
-                </div>
-                <div class="bottom">
-                    <div class="left">
-                        <p>pkr. <span class="price">4000/</span> <span class="gray">day</span> </p>
-
-
-                    </div>
-                    <div class="right">
-                        <button>Rent Now</button>
-                    </div>
-                </div>
-
-
-            </div>
-            <div class="first">
-
-                <div class="upper">
-                    <div class="left">
-                        <h5>Wagon-R</h5>
-                        <p>Sport</p>
-                    </div>
-                    <div class="right">
-                        <img src="assets/image/l-home/red-heart.svg" alt="">
-                    </div>
-                </div>
-                <div class="middle">
-                    <img src="assets/image/l-home/honda.svg" alt="">
-                </div>
-                <div class="lower-middle">
-                    <div class="flex">
-                        <img src="assets/image/l-home/gas-station.svg" alt="">
-                        <p>90L</p>
-                    </div>
-                    <div class="flex">
-                        <img src="assets/image/l-home/manual.svg" alt="">
-                        <p>Manual</p>
-                    </div>
-                    <div class="flex">
-                        <img src="assets/image/l-home/people.svg" alt="">
-                        <p>4 People</p>
-                    </div>
-                </div>
-                <div class="bottom">
-                    <div class="left">
-                        <p>pkr. <span class="price">4000/</span> <span class="gray">day</span> </p>
-
-
-                    </div>
-                    <div class="right">
-                        <button>Rent Now</button>
-                    </div>
-                </div>
-
-
-            </div>
-         
-
-
+       
+           
 
 
 

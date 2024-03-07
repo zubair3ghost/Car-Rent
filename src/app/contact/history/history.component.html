@@ -14,7 +14,7 @@
          <div class="history-car">
 
             <div class="cars">
-                <div class="first">
+                <div class="first"    *ngFor="let item of getvar" >
 
                     <div class="left-first">
                         <div class="upper">
@@ -42,7 +42,7 @@
                     <div class="right-first">
                           <div class="top-right">
                             <p>Cancel</p>
-                            <button>Return</button>
+                            <button routerLink="/detail">Return</button>
                           </div>
                           <div class="london-bridge">
                             <div class="left-of-bridge">

@@ -10,15 +10,21 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./sign-up.component.scss']
 })
 export class SignUpComponent implements OnInit {
+CountryISO: any;
+SearchCountryField: any;
+phoneNumber:any
+id: any
 
   constructor(private http: HttpService,private router:Router, private userService: UserService) { }
   hideHeaderFooter = true; // Set this flag to true to hide header and footer
 
-
+phonenumber:string=''
 
   ngOnInit(): void {
   }
+  onCountryChange(event:any){
 
+  }
 
 signUp(value: any){
   console.log(value);

@@ -229,9 +229,15 @@
                     padding: 15px 30px;
                     justify-content: center;
                     align-items: center;
-
+                    cursor: pointer;
                     border-radius: 4px;
                     background: var(--blue, #3563E9);
+                    &:hover{
+                        background-color: #081630;
+                        transition:  .5s all ease;
+                        transform: scale(.99);
+   
+                    }
                 }
             }
 

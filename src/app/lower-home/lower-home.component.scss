@@ -333,7 +333,7 @@
         margin-block: 2rem;
         padding: 3rem;
         @media(max-width:733px){
-          padding: 2px;
+          padding: 1rem;
         }
 
         .para {
@@ -351,8 +351,8 @@
                 font-weight: 600;
                 line-height: normal;
                 text-transform: capitalize;
-                @media(max-width:733px){
-                    font-size: 30px;
+                @media(max-width:940px){
+                    font-size: 22px;
                     
                 }
             }
@@ -398,6 +398,7 @@
                 input {
                     padding-left: 25px;
                     outline: none;
+                    width: 591px;
                     color: rgba(0, 0, 0, 0.35);
                     font-family: Poppins;
                     border: none;
@@ -406,10 +407,10 @@
                     font-weight: 500;
                     line-height: normal;
                     text-transform: capitalize;
-                    @media(max-width:733px){
+                    @media(max-width:940px){
                         width: 100%;
-                        font-size: 12px;
-                        padding-left: 1px;
+                        font-size: 14px;
+                        padding-left: 10px;
                     }
                 }
 
@@ -426,8 +427,8 @@
                     color: white;
                     border-radius: 17px;
                     background: var(--blue, #3563E9);
-                    @media(max-width:733px){
-                        font-size: 20px;
+                    @media(max-width:940px){
+                        font-size: 16px;
                         padding: 10px 30px;
                     }
                 }

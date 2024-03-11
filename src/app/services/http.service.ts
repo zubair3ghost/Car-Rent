@@ -7,8 +7,10 @@ import { UserService } from "./user.service";
 })
 
 export class HttpService{
+    BASE_PATH: string = 'HTTP://localhost:5000';
 
-    BASE_PATH: string = 'http://40.117.141.7:5000';
+
+    // BASE_PATH: string = 'http://40.117.141.7:5000';
     constructor(private http: HttpClient,private userservice: UserService){}
    //here  is the authentication  module all api are handle and done
 

@@ -21,7 +21,7 @@
           <span *ngIf="username.invalid  && username.touched "> Enter right name</span>
         </div>
         <div class="input">
-          <!-- <label for="name">Phone</label>
+          <label for="name">Phone</label>
         <div class="flag">
           <img src="assets/image/sign-up/test.png" alt="" width="30px" height="30px">
           
@@ -29,27 +29,7 @@
             required pattern="[0-9]*">
            
         </div>
-        <span *ngIf="phone.invalid  && phone.touched "> Enter right phone numeber</span> -->
-  
-        <!-- <ngx-intl-tel-input
-        [cssClass]="'custom'"
-        [preferredCountries]="[CountryISO.UnitedStates, CountryISO.UnitedKingdom]"
-        [enableAutoCountrySelect]="false"
-        [enablePlaceholder]="true"
-        [searchCountryFlag]="true"
-        [searchCountryField]="[SearchCountryField.Iso2, SearchCountryField.Name]"
-        [selectFirstCountry]="false"
-        [selectedCountryISO]="CountryISO.India"
-        [maxLength]="15"
-        [phoneValidation]="true"
-        
-        name="phone"
-        formControlName="phone"
-      ></ngx-intl-tel-input> -->
-
-
-       
-        
+        <span *ngIf="phone.invalid  && phone.touched "> Enter right phone numeber</span> 
         </div>
         <div class="input">
           <label for="name">Email</label>

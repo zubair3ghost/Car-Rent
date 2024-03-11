@@ -67,7 +67,7 @@
     <p>$80.00/ <span>days</span> </p>
     <p class="gray">$100.00</p>
 </div>
-<button>Rent Now</button>
+<button [routerLink]="['/billing-rental', data._id]">Rent Now</button>
 
          </div>
        
@@ -184,7 +184,7 @@
           <div class="lower-middle">
               <div class="flex">
                   <img src="assets/image/l-home/gas-station.svg" alt="">
-                  <p>90l</p>
+                  <p>90L</p>
               </div>
               <div class="flex">
                   <img src="assets/image/l-home/manual.svg" alt="">

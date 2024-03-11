@@ -6,7 +6,7 @@ import { Injectable } from "@angular/core";
 
 export class UserService {
 
-private  baseurl:string='http://40.117.141.7:5000';
+private  baseurl:string='HTTP://localhost:5000';
  
     getbaseurl(fileUrl: string){
         return `${this.baseurl}/${fileUrl}`

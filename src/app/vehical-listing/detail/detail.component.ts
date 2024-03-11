@@ -69,7 +69,7 @@ export class DetailComponent implements OnInit {
   }
   
   
-
+// thisi is for favourite and unfavourite api calls
  favourite(id:any){
   this.http.favoritecar(id).subscribe((res)=>{
       console.log(res,'here  is favourite api id');

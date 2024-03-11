@@ -1,3 +1,4 @@
+import { animate } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from 'src/app/services/http.service';
 import { UserService } from 'src/app/services/user.service';
@@ -70,5 +71,7 @@ export class FavouriteComponent implements OnInit {
  // 
  
   }
+  // not working 
+  
 
 }

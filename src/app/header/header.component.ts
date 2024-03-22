@@ -12,13 +12,13 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
   username: string = ''
-    usertokkken: string | null = this.userService.token
+  usertokkken: string | null = this.userService.token
   menue: boolean = false
 
   constructor(
     public userService: UserService,
     private renderer: Renderer2,
-    private router:Router
+    private router: Router
 
   ) {
     this.router.events.subscribe(event => {
@@ -27,7 +27,7 @@ export class HeaderComponent implements OnInit {
         this.menue = false;
       }
     });
-   }
+  }
   @Input() hideHeaderFooter: boolean = false;
 
 
@@ -43,7 +43,7 @@ export class HeaderComponent implements OnInit {
   fixed: boolean = false;
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    this.menue=false
+    this.menue = false
     const navbar = document.querySelector('.nav-container') as HTMLElement; // Cast to HTMLElement
     const navbarOffsetTop = navbar.getBoundingClientRect().top;
     if (window.scrollY > navbarOffsetTop) {
@@ -54,8 +54,8 @@ export class HeaderComponent implements OnInit {
       this.fixed = false;
     }
   }
-//  for mouse listner when we click outside are inside the this block 
-@HostListener('document:click', ['$event'])
+  //  for mouse listner when we click outside are inside the this block 
+  @HostListener('document:click', ['$event'])
   onDocumentClick(event: MouseEvent) {
     const clickedElement = event.target as HTMLElement;
     if (!clickedElement.closest('.user')) {
@@ -65,13 +65,13 @@ export class HeaderComponent implements OnInit {
 
 
 
-// this is for showing full user pannel if user log in
+  // this is for showing full user pannel if user log in
   imgtoggle() {
     this.menue = !this.menue
   }
-  
 
-// this  is for  shwoing burger icons and cross icons
+
+  // this  is for  shwoing burger icons and cross icons
   show = false
   burgericon = true;
   toggle() {
